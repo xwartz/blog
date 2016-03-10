@@ -1,0 +1,24 @@
+{
+  "name": "pupa",
+  "version": "1.0.0",
+  "description": "技术文章",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "": "gitbook init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@xwartz.github.com:xwartz/pupa.git"
+  },
+  "keywords": [
+    "pupa",
+    "FE"
+  ],
+  "author": "xwartz",
+  "license": "MIT",
+  "devDependencies": {
+    "gitbook": "^2.6.7",
+    "gitbook-cli": "^2.1.2"
+  }
+}
