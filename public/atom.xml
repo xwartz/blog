@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>xwartz</title>
   <subtitle>Want To Be An Artist</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/pupa/atom.xml" rel="self"/>
   
-  <link href="http://xwartz.github.com/pupa/"/>
+  <link href="http://xwartz.github.com/"/>
   <updated>2016-04-29T12:36:28.000Z</updated>
-  <id>http://xwartz.github.com/pupa/</id>
+  <id>http://xwartz.github.com/</id>
   
   <author>
     <name>xwartz</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://xwartz.github.com/pupa/2016/04/29/hello-world/"/>
-    <id>http://xwartz.github.com/pupa/2016/04/29/hello-world/</id>
+    <link href="http://xwartz.github.com/2016/04/29/hello-world/"/>
+    <id>http://xwartz.github.com/2016/04/29/hello-world/</id>
     <published>2016-04-29T12:36:28.000Z</published>
     <updated>2016-04-29T12:36:28.000Z</updated>
     
