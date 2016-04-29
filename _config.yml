@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
-timezone:
+title: xwartz
+subtitle: Want To Be An Artist
+description: Want To Be An Artist
+author: xwartz
+language: zh
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /pupa
+url: http://xwartz.github.com/pupa
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -28,13 +28,13 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -52,7 +52,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: YYYY/MM/DD
 time_format: HH:mm:ss
 
 # Pagination
@@ -63,9 +63,20 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: apollo
+
+# 在归档页面显示所有文章
+# 需要上面安装的 hexo-generator-archive 插件支持
+archive_generator:
+    per_page: 0
+    yearly: false
+    monthly: false
+    daily: false
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repository: git@xwartz.github.com:xwartz/pupa.git
+  branch: gh-pages
+  message: post updated
