@@ -5,7 +5,7 @@
 # Site
 title: Pupa
 subtitle: To Be An Artist
-description: About life, books and code.
+description: About Life, Books and Code.
 author: xwartz
 language: en
 timezone: Asia/Shanghai
@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://xwartz.github.com
 root: /pupa
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:title/
 permalink_defaults:
 
 # Directory
