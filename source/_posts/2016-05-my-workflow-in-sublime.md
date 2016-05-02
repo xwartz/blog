@@ -61,7 +61,7 @@ tags: 前端工程
 
 对于代码重构的话，肯定少不了 `lint`。目前比较流行的主要有 [JSLint](http://jshint.com/docs/) 和 [ESLint](http://eslint.org/)，我选择 `ESLint`，因为它更灵活，可配置性高，并且有社区活跃用户在维持。 
 
-使用 `ESLint` 需要安装 [Nodejs](http://nodejs.org/)，嗷，`Nodejs` 6.0 已经支持93%(记得是)的特性了，真棒！以后可以少用 `Bable` 了。 
+使用 `ESLint` 需要安装 [Nodejs](http://nodejs.org/)，嗷，`Nodejs` 6.0 已经支持93%(记得是)的特性了，真棒！以后可以少用 `Babel` 了。 
 然后全局安装 `ESLint`, `npm i -g eslint`。那么已经可以在命令行里使用了。
 
 要在 `Sublime` 中配置的话，需要安装插件 [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) 和 [SublimeLinter-contrib-eslint](https://github.com/roadhump/SublimeLinter-eslint), 
@@ -109,8 +109,9 @@ tags: 前端工程
 
 ![sublime lint](./sublime.png)
 
-还有一个就是可以在 `github` 项目中很方便的加上它的 Logo ![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg) 
-(`Readme` 中总是需要加点图标才好唬人嘛...)
+还有一个就是可以在 `github` 项目中很方便的加上它的 Logo 
+
+![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg) 
 
 
 ### Over
