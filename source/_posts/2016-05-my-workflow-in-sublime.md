@@ -61,8 +61,6 @@ tags: 前端工程
 
 对于代码重构的话，肯定少不了 `lint`。目前比较流行的主要有 [JSLint](http://jshint.com/docs/) 和 [ESLint](http://eslint.org/)，我选择 `ESLint`，因为它更灵活，可配置性高，并且有社区活跃用户在维持。 
 
-![sublime lint](./sublime.png)
-
 使用 `ESLint` 需要安装 [Nodejs](http://nodejs.org/)，嗷，`Nodejs` 6.0 已经支持93%(记得是)的特性了，真棒！以后可以少用 `Bable` 了。 
 然后全局安装 `ESLint`, `npm i -g eslint`。那么已经可以在命令行里使用了。
 
@@ -83,25 +81,33 @@ tags: 前端工程
 目前 `JavaScript` 的代码规范也有很多份，比较流行的有 [Google](https://google.github.io/styleguide/javascriptguide.xml), [AirBnb](https://github.com/airbnb/javascript), [Standard](https://github.com/feross/standard)。最后我选择了 `Standard`，因为它规则刚好是我喜欢的。
 
 #### [Rules](https://github.com/feross/standard#rules):
->
-- **2 spaces** – for indentation
-- **Single quotes for strings** – except to avoid escaping
-- **No unused variables** – this one catches *tons* of bugs!
-- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
-- **Never start a line with `(` or `[`**
-  - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
-  - [More details][4]
-- **Space after keywords** `if (condition) { ... }`
-- **Space after function name** `function name (arg) { ... }`
-- Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
-- Always handle the node.js `err` function parameter
-- Always prefix browser globals with `window` – except `document` and `navigator` are okay
-  - Prevents accidental use of poorly-named browser globals like `open`, `length`,
-    `event`, and `name`.
-- **And [more goodness][5]** – *give `standard` a try today!*
 
+>- **2 spaces** – for indentation
+>- **Single quotes for strings** – except to avoid escaping
+>- **No unused variables** – this one catches *tons* of bugs!
+>- **No semicolons** – [It's][1] [fine.][2] [Really!][3]
+>- **Never start a line with `(` or `[`**
+>  - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
+>  - [More details][4]
+>- **Space after keywords** `if (condition) { ... }`
+>- **Space after function name** `function name (arg) { ... }`
+>- Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
+>- Always handle the node.js `err` function parameter
+>- Always prefix browser globals with `window` – except `document` and `navigator` are okay
+>  - Prevents accidental use of poorly-named browser globals like `open`, `length`,
+    `event`, and `name`.
+>- **And [more goodness][5]** – *give `standard` a try today!*
+
+
+[1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
+[2]: http://inimino.org/~inimino/blog/javascript_semicolons
+[3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
+[4]: https://github.com/feross/standard/blob/master/RULES.md#semicolons
+[5]: https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
 
 所以每次开始一个项目的时候，我总是 `eslint --init` 之后选择 `Standard`，然后加一些插件就 OK 了。
+
+![sublime lint](./sublime.png)
 
 还有一个就是可以在 `github` 项目中很方便的加上它的 Logo ![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg) 
 (`Readme` 中总是需要加点图标才好唬人嘛...)
