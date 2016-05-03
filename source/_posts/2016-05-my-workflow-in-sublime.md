@@ -74,11 +74,11 @@ tags: 前端工程
 "javascript (babel)": "javascript",
 ```
 
-总之还是需要多看官方文档，多谷歌，调试到适合自己的项目环境才好。
+总之还是应该多看官方文档，根据自己的项目情况去配置环境。
 
 ### Code Style
 
-目前 `JavaScript` 的代码规范也有很多份，比较流行的有 [Google](https://google.github.io/styleguide/javascriptguide.xml), [AirBnb](https://github.com/airbnb/javascript), [Standard](https://github.com/feross/standard)。最后我选择了 `Standard`，因为它规则刚好是我喜欢的。
+目前 `JavaScript` 的代码规范也有很多份，比较流行的有 [Google](https://google.github.io/styleguide/javascriptguide.xml), [AirBnb](https://github.com/airbnb/javascript), [Standard](https://github.com/feross/standard)。推荐选择 `Standard`，不喜欢写分号，以下是它的规则
 
 #### [Rules](https://github.com/feross/standard#rules):
 
@@ -109,14 +109,14 @@ tags: 前端工程
 
 ![sublime lint](./sublime.png)
 
-还有一个就是可以在 `github` 项目中很方便的加上它的 Logo 
+还可以在 `github` 项目中很方便的加上它的 Logo 
 
 ![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg) 
 
 
 ### Over
 
-好了，基本上的配置也就这些了，虽然还不够强大，毕竟对于js这种弱类型的语言静态分析没那么容易，希望有更好的IDE编辑器出现，希望 `VSCode` 的性能问题能搞定。
+好了，基本上的配置也就这些了，虽然还不够强大，毕竟对于js这种弱类型的语言静态分析没那么容易，希望有更好的IDE出现，希望 `VSCode` 的性能问题能搞定。
 
 前端是个很杂的玩意，总是需要时间去积累，碰到了问题多看官方文档，多多使用谷歌，好在前端的社区足够活跃。
 
