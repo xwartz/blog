@@ -9,3 +9,5 @@
 [基于webpack搭建前端工程解决方案探索 ](https://github.com/chemdemo/chemdemo.github.io/issues/10)
 
 [React Native 开发指南](http://f8-app.liaohuqiu.net/)
+
+[看漫画，学 Redux](https://github.com/jasonslyvia/a-cartoon-intro-to-redux-cn?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
