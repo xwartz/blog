@@ -57,6 +57,37 @@ tags: 前端工程
 
 常用的有这些：`Emmet`, `DocBlockr`, `Git`, `GitGutter`, `Bracket Highlighter`, `Tag`, `Autocomplete`, `Color Highlighter`, `Reactjs` ...
 
+### Editorconfig
+
+为了让代码风格在不同IDE下保持一致，应该在项目目录下配置 [.editorconfig](http://editorconfig.org/)
+
+这是我一般常用的配置
+
+```
+# editorconfig.org
+
+root = true
+
+[*]
+indent_style = tab
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{json,js,jsx,html,css}]
+indent_style = space
+indent_size = 2
+
+[.eslintrc]
+indent_style = space
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+```
+
 ### Lint
 
 对于代码重构的话，肯定少不了 `lint`。目前比较流行的主要有 [JSLint](http://jshint.com/docs/) 和 [ESLint](http://eslint.org/)，我选择 `ESLint`，因为它更灵活，可配置性高，并且有社区活跃用户在维持。 
