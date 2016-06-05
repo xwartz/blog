@@ -10,6 +10,10 @@ cache:
 install:
   - npm install
 
+before_script:
+  - rm -rf themes/pupa
+  - git clone git@github.com:xwartz/hexo-pupa-theme.git themes/pupa
+
 script:
   - npm run build
 

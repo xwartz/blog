@@ -6,14 +6,13 @@ tags:
  - git
 ---
 
+{% asset_img travis.svg %}
+
 [travis-ci](https://travis-ci.org/) 是一个免费的持续集成服务，
 所以就想着法子来利用它省去一些体力活的工作。简单来说其实就是做一些脚本执行任务。
 
 我们一般使用 `travis-ci` 来自动执行测试任务，现在我想让它来自动更新我的博客文章。
 当我 `push` 了文章到 `github` 之后想让它自动更新到 `gh-pages`(其实不限于文章)。
-
-
-![travis ci](./travis.svg)
 
 <!-- more -->
 
