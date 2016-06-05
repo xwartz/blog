@@ -80,3 +80,5 @@ deploy:
   repository: git@github.com:xwartz/pupa.git
   branch: gh-pages
   message: post updated
+  name: xwartz
+  email: stddup@gmail.com

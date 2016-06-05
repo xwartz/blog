@@ -11,7 +11,7 @@ install:
 - npm install
 
 script:
-- rm -f ./.git/index.lock
+- rm -rf .deploy_git
 - npm run build
 
 os:
