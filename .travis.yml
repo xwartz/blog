@@ -20,7 +20,7 @@ after_script:
   - git config user.email "stddup@gmail.com"
   - git add --all
   - git commit -m "pupa forward"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+  - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:gh-pages
 
 os:
   - osx
