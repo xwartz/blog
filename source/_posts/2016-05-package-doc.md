@@ -9,13 +9,15 @@ tags: 翻译
 package.json(5)
 ===========================================================
 
-## 说明
+### 说明
 
 本文档包含所有的 `package.json` 文件配置说明。`package.json` 文件必须是真正的 `json` 对象，而不是 js 对象。
 
 本文档中描述的很多行为受到 `npm-config(7)` 配置文件的影响。
 
-## name
+<!-- more -->
+
+### name
 
 在 `package.json` 文件中最重要的配置就是 `name` 和 `version` 字段了。
 如果没有这两个字段，讲无法被安装。
@@ -39,27 +41,25 @@ package.json(5)
 
 可以在名字前加上 `scope` 前缀, 如：`@myorg/mypackage`. 具体查 `npm-scope(7)` 。
 
-<!-- more -->
-
-## version
+### version
 
 版本号必须能被 [node-semver](https://github.com/isaacs/node-semver) 解析， 它是 `npm` 的一个依赖包。(`npm install semver` to use it yourself.)
 
 更多关于版本号的说明查看 semver(7).
 
-## description
+### description
 
 写一段关于这个包的描述，有助于帮助人们在搜索 `npm search` 结果中发现它。
 
-## keywords
+### keywords
 
 关键字是一组字符串数组，有助于帮助人们在搜索 `npm search` 结果中发现它。
 
-## homepage
+### homepage
 
 项目的首页地址
 
-## bugs
+### bugs
 
 项目 bug 的反馈地址，或者邮件地址。
 它应该是这个样子的：
@@ -75,7 +75,7 @@ package.json(5)
 如果提供了url，使用 `npm bugs` 命令可以打开。
 
 
-## license
+### license
 
 你应该为你的项目指定 `license`，这样子，别人就知道使用这个项目的权限了。
 
@@ -134,7 +134,7 @@ expression syntax version 2.0 string](https://npmjs.com/package/spdx), 如下方
 
 应该考虑设置字段 `"private": true` 来阻止被意外 `publish`.
 
-## people fields: author, contributors
+### people fields: author, contributors
 
 "author" 是一个 `person` 对象，
 "contributors" 是一个 `person` 对象数组。
@@ -155,7 +155,7 @@ expression syntax version 2.0 string](https://npmjs.com/package/spdx), 如下方
 `npm` 同样有 "maintainers" 字段来设置你的用户信息。
 
 
-## files
+### files
 
 "files" 字段是一个包含你项目文件的数组。
 如果使用了文件夹，那么该文件夹下的文件将被包含(除非被其他规则忽略)。
@@ -187,7 +187,7 @@ expression syntax version 2.0 string](https://npmjs.com/package/spdx), 如下方
 * `.npmrc`
 * `node_modules`
 
-## main
+### main
 
 `main` 字段指定你程序的入口模块。
 也就是说，如果你的包名是 `foo`, 一个用户安装了它, 并且
@@ -195,7 +195,7 @@ expression syntax version 2.0 string](https://npmjs.com/package/spdx), 如下方
 
 这应该是一个相对于项目根目录的文件地址。
 
-## bin
+### bin
 
 很多包都有一个或多个可执行文件被安装到 `PATH`。`npm` 可以很容易的实现这点(实际上，npm 就是使用的这个功能)。
 
@@ -220,7 +220,7 @@ expression syntax version 2.0 string](https://npmjs.com/package/spdx), 如下方
     , "version": "1.2.5"
     , "bin" : { "my-program" : "./path/to/program" } }
 
-## man
+### man
 
 指定一个文件或者文件数组供 `man` 程序使用。
 
@@ -262,7 +262,7 @@ expression syntax version 2.0 string](https://npmjs.com/package/spdx), 如下方
 
 以上将会创建 `man foo` 和 `man 2 foo`
 
-## directories
+### directories
 
 CommonJS [Packages](http://wiki.commonjs.org/wiki/Packages/1.0)
 说明了几种方式使用 `directories` 对象指明你的项目结构。
@@ -272,12 +272,12 @@ CommonJS [Packages](http://wiki.commonjs.org/wiki/Packages/1.0)
 
 在未来，这些信息将会有其他创造性的方式。
 
-### directories.lib
+#### directories.lib
 
 Tell people where the bulk of your library is.  Nothing special is done
 with the lib folder in any way, but it's useful meta info.
 
-### directories.bin
+#### directories.bin
 
 If you specify a `bin` directory in `directories.bin`, all the files in
 that folder will be added.
@@ -287,21 +287,21 @@ Because of the way the `bin` directive works, specifying both a
 specify individual files, use `bin`, and for all the files in an
 existing `bin` directory, use `directories.bin`.
 
-### directories.man
+#### directories.man
 
 A folder that is full of man pages.  Sugar to generate a "man" array by
 walking the folder.
 
-### directories.doc
+#### directories.doc
 
 Put markdown files in here.  Eventually, these will be displayed nicely,
 maybe, someday.
 
-### directories.example
+#### directories.example
 
 Put example scripts in here.  Someday, it might be exposed in some clever way.
 
-### directories.test
+#### directories.test
 
 Put your tests in here. It is currently not exposed, but it might be in the
 future.
@@ -403,14 +403,14 @@ For example, these are all valid:
       }
     }
 
-### URLs as Dependencies
+#### URLs as Dependencies
 
 You may specify a tarball URL in place of a version range.
 
 This tarball will be downloaded and installed locally to your package at
 install time.
 
-### Git URLs as Dependencies
+#### Git URLs as Dependencies
 
 Git urls can be of the form:
 
