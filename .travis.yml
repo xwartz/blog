@@ -1,3 +1,8 @@
+env:
+  global:
+    - GH_REF: github.com/xwartz/pupa.git
+    - secure: "ngE7BbMRLUo32lGgqFnAkd1zKe/XecJZuOBX/gOBiyXe2R7HWqdtAh0mr9kgARg0z0Vnz1BCcRRkySKVa/JiV7NLH5OlC2cuHXhmnKlo5PvBpV9664A/Wc7XnywKpMx8qJBxAwa3Rr3FSgmOQwmjJVjEteroxrUZmRE6UBD+ANqLggzt5k1YstQ1OtH+duXeTyVmdt89sqj56WnTkAJ535hpi/64V/uLqkHk3pWUv+pxgOck6Wf/uUsA4llpXkNF/hkT7Pj/twMiNe4JyK1UewKi+f641Pw7lbQod/t44M53RY4eYMX9IHv53xOY/HHOdauSFw1lenquO2413xAg0Qj+LKIska54pkfxjKytZ+dA3uBH/HVFaUJxKY7m9Nkh0UO4Mm9u/lGT/89IX16juQKNieBbNoNJS05yYaL1B85Mzxj6leEJcsjPT6V2fyvynAg0VerG9xGvRUmWxw5l0XEf7n4Hf34PYLLAJNUy+bDvGZqt181W3B08FxOqkAmKN7oKiozCkoS0PmdqcI9gXU56GZEVvLjXjtT0biEZ9RhX8CWRluJhwybSPhx1dgeYHYgbfXI+wE1RmWJ+HlG3kAdmuEbnVM5skUIL5OwndQGTYfsGnZBT3QPxOoYMU0rF5xK7iOIm5Z8E5ZhQJXCf/3N+ww3eCynG9BS+D5xj56E="
+
 sudo: false
 language: node_js
 node_js:
@@ -8,11 +13,19 @@ cache:
     - node_modules
 
 install:
-- npm install
+  - npm install
 
 script:
-- rm -rf .deploy_git
-- npm run build
+  - npm run build
+
+after_script:
+  - cd public
+  - git init
+  - git config user.name "xwartz"
+  - git config user.email "stddup@gmail.com"
+  - git add --all
+  - git commit -m "pupa forward"
+  - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
 
 os:
   - osx
