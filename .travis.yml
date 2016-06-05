@@ -14,7 +14,7 @@ before_script:
   - git config --global user.name "xwartz"
   - git config --global user.email "stddup@gmail.com"
   - rm -rf themes/pupa
-  - git clone https://${GH_Token}@{GH_THEME} themes/pupa
+  - git clone https://${GH_Token}@${GH_THEME} themes/pupa
 
 script:
   - npm run build
