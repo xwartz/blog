@@ -157,4 +157,6 @@ env:
 参考： 
 [用 Travis CI 自動部署網站到 GitHub](https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/)
 
+[使用 Travis CI 自动更新 GitHub Pages](http://notes.iissnan.com/2016/publishing-github-pages-with-travis-ci/)
+
 [travis-ci docs](https://docs.travis-ci.com/)
