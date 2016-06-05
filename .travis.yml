@@ -1,8 +1,3 @@
-env:
-  global:
-    - GH_REF: github.com/xwartz/pupa.git
-    - secure: "ngE7BbMRLUo32lGgqFnAkd1zKe/XecJZuOBX/gOBiyXe2R7HWqdtAh0mr9kgARg0z0Vnz1BCcRRkySKVa/JiV7NLH5OlC2cuHXhmnKlo5PvBpV9664A/Wc7XnywKpMx8qJBxAwa3Rr3FSgmOQwmjJVjEteroxrUZmRE6UBD+ANqLggzt5k1YstQ1OtH+duXeTyVmdt89sqj56WnTkAJ535hpi/64V/uLqkHk3pWUv+pxgOck6Wf/uUsA4llpXkNF/hkT7Pj/twMiNe4JyK1UewKi+f641Pw7lbQod/t44M53RY4eYMX9IHv53xOY/HHOdauSFw1lenquO2413xAg0Qj+LKIska54pkfxjKytZ+dA3uBH/HVFaUJxKY7m9Nkh0UO4Mm9u/lGT/89IX16juQKNieBbNoNJS05yYaL1B85Mzxj6leEJcsjPT6V2fyvynAg0VerG9xGvRUmWxw5l0XEf7n4Hf34PYLLAJNUy+bDvGZqt181W3B08FxOqkAmKN7oKiozCkoS0PmdqcI9gXU56GZEVvLjXjtT0biEZ9RhX8CWRluJhwybSPhx1dgeYHYgbfXI+wE1RmWJ+HlG3kAdmuEbnVM5skUIL5OwndQGTYfsGnZBT3QPxOoYMU0rF5xK7iOIm5Z8E5ZhQJXCf/3N+ww3eCynG9BS+D5xj56E="
-
 sudo: false
 language: node_js
 node_js:
@@ -29,3 +24,8 @@ after_script:
 
 os:
   - osx
+
+env:
+  global:
+    - GH_REF: github.com/xwartz/pupa.git
+    - secure: "PysLbVjicuAy2j1mKGYzllCQEvqWOqRHgcNIFyVxc3pnMQ2hWiAGL5aEEQxbsbF37UePTTanyWf/fHiBYIJE/6dOH/Rnn79LX4E3AGbTjF9v0rse85DYWqRUqf6nruewMBRoSPWmCZNEsNg/aQHiRirvLC+RPCLrIxm+83ynY+YO6mFnmseyWlJhm/t+d9cUuD+eCV+58dDcLPq4h049CegCQVRTRjEt4h4KHjz30l//2GHedg8SimDCKKrm/dNAAzfG/mTu1G0qrCd6b0Mgs4yao4WHyOBOGokquqdZroHq5x9dt+YE+L5yl7BqJLwQZmZNU1GGgb4Of58stMMXBM9lN/O2+UpFpDtduRUUvZzeHHPskDh8Y+HQHkWJke6hQ83T85FfjsOWOlOUEdn+WyczrKoBIcDLH1oIcDeApRNdnVgBc7Kvkw6vf4RKKoLTQLbsmcdEOL7aJCZvjNY7KXVhAwoSg8ENIwxWipFDoLZYloPoDGGKQ7deZBcTztIxGRkEn7iWYAEQCjihKZAD3HmrG6dfcsZqVbZNBkbDmAW8rkxR9L+8NXMfMpKr7ePXrEYD5ZipYcAXMbHsk7U5mquzuzCB0P0rA0GSUpDupQ2l+4tIfO2QEqEStn8qRqVm1NcBSy0XipaHixmRyCzxjuYuZu++2p2/xJUrVpNuEwo="
