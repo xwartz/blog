@@ -14,7 +14,7 @@ before_script:
   - git config --global user.name "xwartz"
   - git config --global user.email "stddup@gmail.com"
   - rm -rf themes/pupa
-  - git clone https://${GH_Token}@github.com/hexo-pupa-theme.git themes/pupa
+  - git clone https://${GH_Token}@{GH_THEME} themes/pupa
 
 script:
   - npm run build
@@ -33,5 +33,6 @@ os:
 
 env:
   global:
+    - GH_THEME: github.com/xwartz/hexo-pupa-theme.git
     - GH_REF: github.com/xwartz/pupa.git
     - secure: "PysLbVjicuAy2j1mKGYzllCQEvqWOqRHgcNIFyVxc3pnMQ2hWiAGL5aEEQxbsbF37UePTTanyWf/fHiBYIJE/6dOH/Rnn79LX4E3AGbTjF9v0rse85DYWqRUqf6nruewMBRoSPWmCZNEsNg/aQHiRirvLC+RPCLrIxm+83ynY+YO6mFnmseyWlJhm/t+d9cUuD+eCV+58dDcLPq4h049CegCQVRTRjEt4h4KHjz30l//2GHedg8SimDCKKrm/dNAAzfG/mTu1G0qrCd6b0Mgs4yao4WHyOBOGokquqdZroHq5x9dt+YE+L5yl7BqJLwQZmZNU1GGgb4Of58stMMXBM9lN/O2+UpFpDtduRUUvZzeHHPskDh8Y+HQHkWJke6hQ83T85FfjsOWOlOUEdn+WyczrKoBIcDLH1oIcDeApRNdnVgBc7Kvkw6vf4RKKoLTQLbsmcdEOL7aJCZvjNY7KXVhAwoSg8ENIwxWipFDoLZYloPoDGGKQ7deZBcTztIxGRkEn7iWYAEQCjihKZAD3HmrG6dfcsZqVbZNBkbDmAW8rkxR9L+8NXMfMpKr7ePXrEYD5ZipYcAXMbHsk7U5mquzuzCB0P0rA0GSUpDupQ2l+4tIfO2QEqEStn8qRqVm1NcBSy0XipaHixmRyCzxjuYuZu++2p2/xJUrVpNuEwo="
