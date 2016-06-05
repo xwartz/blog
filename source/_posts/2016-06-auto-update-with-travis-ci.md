@@ -114,16 +114,27 @@ cache:
 install:
   - npm install
 
+before_script:
+  - git config --global user.name "xwartz"
+  - git config --global user.email "stddup@gmail.com"
+  # 确保主题是最新的
+  - rm -rf themes/pupa
+  # clone 博客主题
+  - git clone https://${GH_Token}@${GH_THEME} themes/pupa
+
 script:
+  # 生成静态文件
   - npm run build
 
 after_script:
+  # 将生成的静态文件，初始化为 git 仓库
   - cd public
   - git init
   - git config user.name "xwartz"
   - git config user.email "stddup@gmail.com"
   - git add --all
   - git commit -m "pupa forward"
+  # 推送到 gh-pages 分支
   - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:gh-pages
 
 os:
@@ -131,7 +142,11 @@ os:
 
 env:
   global:
+    # 博客主题仓库
+    - GH_THEME: github.com/xwartz/hexo-pupa-theme.git
+    # 博客仓库
     - GH_REF: github.com/xwartz/pupa.git
+    # 加密的 token
     - secure: "xxxxx="
 
 ```
