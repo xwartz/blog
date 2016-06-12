@@ -154,6 +154,7 @@ env:
 
 详情可查看我的仓库 [pupa](https://github.com/xwartz/pupa.git)
 
+---
 
 参考： 
 [用 Travis CI 自動部署網站到 GitHub](https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/)
