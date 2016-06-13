@@ -53,7 +53,7 @@ deploy:
 
 但是有时候，当你的博客需要别人的贡献时，比如可以让别人投稿，那就会需要 `merge pull request`。
 
-然而`merge`之后，你必须 `pull` 本地仓库为最新的，然后再执行 `npm run deploy` 才会更新到博客。这就会比较麻烦了。
+然而 `merge` 之后，你必须 `pull` 本地仓库为最新的，然后再执行 `npm run deploy` 才会更新到博客。这就会比较麻烦了。
 
 当然一般来说个人博客，遇到这种事还是比较少的，毕竟一般都是自己写文章。
 但是如果你要维护的是一个比较热门的开源库文档呢，那你就得重新考虑自动化的必要性了。
@@ -62,11 +62,11 @@ deploy:
 
 使用 `travis-ci` 提供的持续集成服务。
 
-这里我默认你已经会使用基本的 `travis-ci` 配置了，请自行看文档[docs](https://docs.travis-ci.com/)。
+这里我默认你已经会使用基本的 `travis-ci` 配置了，请自行看文档 [docs](https://docs.travis-ci.com/)。
 
 #### 首先需要 `Github` 提供的 `Personal Access Token`
 
-请到个人设置里创建一个[Personal access tokens](https://github.com/settings/tokens)。
+请到个人设置里创建一个 [Personal access tokens](https://github.com/settings/tokens)。
 
 #### 安装 `travis` 命令行
 
