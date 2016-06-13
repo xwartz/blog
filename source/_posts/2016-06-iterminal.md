@@ -56,7 +56,7 @@ tags:
 编辑 `~/.zshrc`, 设置 `DEFAULT_USER` 为 `whoami` 命令的输出结果。
 
 
-### Syntax highlighting
+## Syntax highlighting
 
 命令行代码高亮插件 `zsh-syntax-highlighting`。
 
@@ -72,7 +72,7 @@ brew install zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
-### Plugins
+## Plugins
 
 添加 `git` 插件，编辑 `~/.zshrc`
 
