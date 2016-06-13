@@ -56,7 +56,37 @@ tags:
 编辑 `~/.zshrc`, 设置 `DEFAULT_USER` 为 `whoami` 命令的输出结果。
 
 
+### Syntax highlighting
+
+命令行代码高亮插件 `zsh-syntax-highlighting`。
+
+安装
+
+```zsh
+brew install zsh-syntax-highlighting
+```
+
+编辑 `~/.zshrc`
+
+```zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+
+### Plugins
+
+添加 `git` 插件，编辑 `~/.zshrc`
+
+```zsh
+plugins=(git)
+```
+
+可使用的别名查看 (https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/git/git.plugin.zsh)
+
+更多插件可查看 https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
+
 ---
 
 
-参考 [iterm2-solarized.md](https://gist.github.com/kevin-smets/8568070)
+## 参考
+
+[iterm2-solarized.md](https://gist.github.com/kevin-smets/8568070)
