@@ -169,7 +169,10 @@ module.exports = function (config) {
 
 ```
 
-这里只需要注意下 `preprocessors` 就好，需要对编写的测试代码使用 `webpack` 预先处理。
+这里需要注意下 `preprocessors`，需要对编写的测试代码使用 `webpack` 预先处理。
+
+`coverage` 一定要在 `reporters` 产生日志时使用，
+在这之前使用，会将 `webpack` 转化的代码也加入进去，影响测试覆盖率。
 
 ### 运行
 
