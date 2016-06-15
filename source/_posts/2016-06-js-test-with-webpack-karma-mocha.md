@@ -34,7 +34,7 @@ tags:
 * 现在的开发多数项目使用了 `webpack`
 * 为了之后的可扩展，哪天想用 `react`，想换成 `vue`，想上 `es6` 啦
 
-由以上两条，可以共用配置，因为项目技术栈，测试的 `webpack` 配置可以共用开发时的配置，
+由以上两条，因为项目技术栈，可以共用配置，测试的 `webpack` 配置可以共用开发时的配置，
 我可不想换个技术栈就得修改测试配置。
 
 ### 为什么选择 `karma`
@@ -58,7 +58,9 @@ You want to use RequireJS for your source files.
 
 文档清晰，API 简单，扩展多。
 
-至于其他可选的推荐 `jasmine`，更多搭配 https://www.npmjs.org/browse/keyword/karma-adapter
+至于其他可选的推荐 `jasmine`。
+
+更多搭配 https://www.npmjs.org/browse/keyword/karma-adapter
 
 ### 为什么用 `es6`
 
@@ -102,7 +104,7 @@ export default {
 
 在 `webpack` 打包前需要经过 `istanbul-instrumenter-loader` 处理，覆盖率统计的应该是源码。
 
-*如果开发时也是用的 `webpack`，那么可以提前可公用的部分。*
+*开发时也是用的 `webpack`，可以提取共用的部分。*
 
 ### karma.config
 
@@ -172,7 +174,10 @@ module.exports = function (config) {
 这里需要注意下 `preprocessors`，需要对编写的测试代码使用 `webpack` 预先处理。
 
 `coverage` 一定要在 `reporters` 产生日志时使用，
+
 在这之前使用，会将 `webpack` 转化的代码也加入进去，影响测试覆盖率。
+
+关于测试覆盖率不准确也可以查看这里的讨论 [code coverage with karma-coverage](https://github.com/webpack/karma-webpack/issues/21)。
 
 ### 运行
 
@@ -183,6 +188,8 @@ module.exports = function (config) {
   "presets": ["es2015"]
 }
 ```
+
+`babel` 配置，根据你项目技术栈修改。
 
 运行 `karma`，借助 `babel-register`。
 
