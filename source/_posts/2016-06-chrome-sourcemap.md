@@ -27,7 +27,7 @@ tags:
 
 右键选择 `Map to Network Resource...`
 
-{% asset_img 1.png %}
+{% asset_img 2.png %}
 
 如此便已有了 `source-map` 功能
 
