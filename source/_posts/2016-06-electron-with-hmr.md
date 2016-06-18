@@ -15,7 +15,9 @@ tags:
 
 关于 `HMR` 的演示可以看 Dan Abramov 的演讲视频 [Hot Reloading with Time Travel](https://www.youtube.com/watch?v=xsSnOQynTHs)。
 
-在 `Electron` 中使用 `HMR` 碰到的主要问题是打开的文件是本地的，所以监听到的 `host` 就变成了 `file://`，然后 `Webpack` 根本无法找到更新了的模块...
+在 `Electron` 中使用 `HMR` 碰到的问题是打开的文件是本地的，`host` 就变成了 `file://`，
+
+所以监听到变化之后，`Webpack` 尝试更新模块时，就查找不到 `hot-update.json` ，然后 `Webpack` 无法更新模块...
 
 <!-- more -->
 
@@ -25,7 +27,7 @@ tags:
 
 上图出现的情况，当时用的配置就是使用的比较官方的方式, 使用 `webpack-dev-server` 和 `react-hot-loader`。
 
-```js
+```js 
 import path from 'path'
 import webpack from 'webpack'
 
@@ -56,11 +58,11 @@ module.exports = {
 
 然后换成 [React Hot Loader 3](https://github.com/gaearon/react-hot-loader/pull/240) 试了一下，果然不出所料，还是没能成功。
 
-本来问题就是出在 `webpack-dev-server` 上嘛，所以就把精力集中在替换 `webpack-dev-server` 上了。
+原本以为问题就是出在 `webpack-dev-server` 上，所以就把精力集中在替换 `webpack-dev-server` 上了。
 
-找到目标就是干，自己用 `express` + `webpack-dev-middleware` + `webpack-hot-middleware` 自己搭建服务。
+然后用 `express` + `webpack-dev-middleware` + `webpack-hot-middleware` 自己搭建服务。
 
-```js
+```js 
 'use strict'
 
 import express from 'express'
@@ -96,9 +98,12 @@ app.listen(PORT, 'localhost', (err) => {
 
 ```
 
-然而还是不行, 最后研究了这个仓库的[配置](https://github.com/chentsulin/electron-react-boilerplate/blob/master/webpack.config.development.js)，发现还有这样的一个配置 `target: 'electron-renderer'`，然而官方文档上却没有说明。
+然而还是不行, 最后研究了这个仓库的[配置](https://github.com/chentsulin/electron-react-boilerplate/blob/master/webpack.config.development.js)，
+发现还有这样的一个配置 `target: 'electron-renderer'`，然而官方文档上却没有说明。
 
-为了避免更多人步我后尘，就去给 `Webpack` 文档增加了说明[Compare: configuration](https://github.com/webpack/docs/wiki/configuration/_compare/135c3a8e13bc72ee5e9aede3571e1e5060188390)。
+Note: `target: 'electron-renderer'` 属性是在 `Webpack` `v1.12.15` 版本中加入的 [make `electron-main` and `electron-renderer` targets works in 1.x](https://github.com/webpack/webpack/pull/2181)。
+
+为了避免更多人步我后尘，就去给 `Webpack` 文档增加了说明 [Compare: configuration](https://github.com/webpack/docs/wiki/configuration/_compare/135c3a8e13bc72ee5e9aede3571e1e5060188390)。
 
 这时候热替换的问题也就解决了，这个过程还能从提交历史中看到 [PupaFM](https://github.com/xwartz/PupaFM/commits/master/dev-server.js)。
 
@@ -110,16 +115,21 @@ But...
 最后再一次查看了一遍 `Webpack` 的文档，仔细的看了 `output.publicPath` 这个配置。
 
 #### output.publicPath
->The `publicPath` specifies the public URL address of the output files when referenced in a browser. For loaders that embed `<script>` or `<link>` tags or reference assets like images, `publicPath` is used as the href or url() to the file when it’s different then their location on disk (as specified by path). This can be helpful when you want to host some or all output files on a different domain or on a CDN. The Webpack Dev Server also takes a hint from `publicPath` using it to determine where to serve the output files from. As with path you can use the [hash] substitution for a better caching profile.
 
-这TM不就是静态资源引入的路径嘛...
+> 
+ The `publicPath` specifies the public URL address of the output files when referenced in a browser. 
+ For loaders that embed `<script>` or `<link>` tags or reference assets like images, 
+ `publicPath` is used as the href or url() to the file when it’s different then their location on disk (as specified by path). 
+ This can be helpful when you want to host some or all output files on a different domain or on a CDN. 
+ The Webpack Dev Server also takes a hint from `publicPath` using it to determine where to serve the output files from. 
+ As with path you can use the [hash] substitution for a better caching profile.
 
-那我只要把相对路径改成绝对地址，不就可以监听到文件更新了嘛。
+那我是不是只要把相对路径改成绝对地址，就可以监听到文件的更新了。
 
 只要这样就好了嘛 `publicPath: 'http://localhost:3000/static/'`...
+
+然后写了个 demo ，具体代码可参考 [Electron React Hot Boilerplate](https://github.com/xwartz/electron-hot-boilerplate)。
 
 果然...
 
 还是需要好好阅读完文档啊，虽然 `Webpack` 的文档也略坑。
-
-具体代码可参考 [Electron React Hot Boilerplate](https://github.com/xwartz/electron-hot-boilerplate)
