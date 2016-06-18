@@ -101,7 +101,7 @@ app.listen(PORT, 'localhost', (err) => {
 然而还是不行, 最后研究了这个仓库的[配置](https://github.com/chentsulin/electron-react-boilerplate/blob/master/webpack.config.development.js)，
 发现还有这样的一个配置 `target: 'electron-renderer'`，然而官方文档上却没有说明。
 
-Note: `target: 'electron-renderer'` 属性是在 `Webpack` `v1.12.15` 版本中加入的 [make `electron-main` and `electron-renderer` targets works in 1.x](https://github.com/webpack/webpack/pull/2181)。
+<p class="tip">`target: 'electron-renderer'` 属性是在 `Webpack` `v1.12.15` 版本中加入的 [make `electron-main` and `electron-renderer` targets works in 1.x](https://github.com/webpack/webpack/pull/2181)。</p>
 
 为了避免更多人步我后尘，就去给 `Webpack` 文档增加了说明 [Compare: configuration](https://github.com/webpack/docs/wiki/configuration/_compare/135c3a8e13bc72ee5e9aede3571e1e5060188390)。
 

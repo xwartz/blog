@@ -51,6 +51,6 @@ tags:
 
 你可以直接看着页面，在控制台修改 `css` 代码就好了，都不需要去修改编辑器里的文件了。
 
-*Chrome 的这个功能还支持 `sass`，可以 `map` 到源代码，如果写 `sass` 的话，强力推荐。*
+<p class="tip">Chrome 的这个功能还支持 `sass`，可以 `map` 到源代码，如果写 `sass` 的话，强力推荐。</p>
 
 其实你还可以在控制台删除，增加文件，参考 [Workspaces - Persistent authoring in the DevTools](https://developer.chrome.com/devtools/docs/workspaces)。

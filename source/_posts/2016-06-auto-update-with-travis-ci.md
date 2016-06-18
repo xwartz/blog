@@ -80,7 +80,7 @@ deploy:
 
 `GH_Token`: 你上一步新建的 `Personal Access Token`。
 
-以上命令支持之后，将会创建一个加密后的 `token`，讲被写入 `.travis.yml`
+以上命令支持之后，将会创建一个加密后的 `token`，将被写入 `.travis.yml`
 
 ```
 secure: "xxxxx="
@@ -156,7 +156,8 @@ env:
 
 ---
 
-参考： 
+### 参考： 
+
 [用 Travis CI 自動部署網站到 GitHub](https://zespia.tw/blog/2015/01/21/continuous-deployment-to-github-with-travis/)
 
 [使用 Travis CI 自动更新 GitHub Pages](http://notes.iissnan.com/2016/publishing-github-pages-with-travis-ci/)

@@ -74,7 +74,7 @@ You want to use RequireJS for your source files.
 
 #### webpack.config
 
-```js webpack.config.js
+```js 
 import path from 'path'
 
 export default {
@@ -108,7 +108,7 @@ export default {
 
 ### karma.config
 
-```js karma.config.js
+```js 
 import webpackConfig from './webpack.config'
 
 module.exports = function (config) {
@@ -183,7 +183,7 @@ module.exports = function (config) {
 
 以上代码都是用 `es6` 编写，包括配置文件，所以必须借助 `babel` 运行。
 
-```js .babelrc
+```json .babelrc
 {
   "presets": ["es2015"]
 }
@@ -197,7 +197,7 @@ module.exports = function (config) {
 ```json package.json
 "scripts": {
   "test": "node -r babel-register ./node_modules/.bin/karma start karma.config.js"
-},
+}
 ```
 
 以上，命令行执行 `npm run test`。
