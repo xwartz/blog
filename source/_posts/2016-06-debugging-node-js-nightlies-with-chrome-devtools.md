@@ -58,6 +58,20 @@ node-nightly --inspect --debug-brk index.js
 Enjoy.
 
 
+### 其他调试方法
+
+至于其他的调试方法，知道的大概有下面这些：
+
+1. [Debugger](https://nodejs.org/api/debugger.html)
+
+2. [node-inspector](https://github.com/node-inspector/node-inspector)
+
+3. [devtool](https://github.com/Jam3/devtool)：基于 `Electron`
+
+4. 还有各种编辑器自带的
+
+关于比较可以看这个评论 [issuecomment-219756916](https://github.com/nodejs/node/pull/6792#issuecomment-219756916)
+
 ### 参考
 
 [Debugging Node.js Nightlies with Chrome DevTools](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27#.f7ybt5s2m)
