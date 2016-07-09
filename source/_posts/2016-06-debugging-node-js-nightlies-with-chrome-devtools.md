@@ -13,6 +13,8 @@ tags:
 Node.js Nightlies 版本已经支持使用 `Chrome` 浏览器来调试了，查看 [pull](https://github.com/nodejs/node/pull/6792)。
 
 
+<!-- more -->
+
 ### 如何使用
 
 下面是关于如何使用 `Chrome` 来调试 `Node.js` 的教程
@@ -78,4 +80,3 @@ Enjoy.
 
 [Add v8_inspector support](https://github.com/nodejs/node/pull/6792)
 
-<!-- more -->
