@@ -226,6 +226,8 @@ os:
   - osx
 ```
 
+私有仓库的话，可以使用 Jenkins(https://jenkins.io/) 自己搭建一个。
+
 ---
 
 ### 技术支持

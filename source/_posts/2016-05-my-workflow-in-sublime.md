@@ -41,7 +41,10 @@ tags: 前端工程
 
 其实前端可用的编辑器还挺多的，我用过的就有这些，也算比较主流了，[Nodepad++](https://notepad-plus-plus.org/), [Atom](https://atom.io/), [VSCode](http://code.visualstudio.com/), [WebStorm](https://www.jetbrains.com/webstorm/), [Sublime](https://www.sublimetext.com/)。
 
-`Nodepad++` 其实我使用的不多，主要是以前编辑文本的时候用过，后来几年一直没有用过了，`Atom` 刚出来的时候就用上了，`VSCode` 也是刚出来就马上用了下，和 `atom` 一个毛病，就是用 `electron` 编写的，性能上不行，打开大文件的时候会卡一会，曾经经常挂掉，`WebStorm` 试用过一段时间，还是非常不错的，就是丑了些，还有费用需要年费... 所以到现在一直使用的就是 `Sublime` 了。
+`Nodepad++` 以前上 J2EE 课程的时候用过，后来几年一直没有用过了，
+`Atom` 刚出来的时候就用上了，
+`VSCode` 也是刚出来就马上用了下，和 `Atom` 一个毛病，就是用 `Electron` 编写的，性能上不行，打开大文件的时候会卡一会，曾经经常挂掉，
+`WebStorm` 试用过一段时间，还是非常不错的，就是丑了些，还有费用需要年费... 所以到现在一直使用的就是 `Sublime` 了。
 
 ![WebStorm Features](./webstorm.png)
 
@@ -61,7 +64,7 @@ tags: 前端工程
 
 为了让代码风格在不同IDE下保持一致，应该在项目目录下配置 [.editorconfig](http://editorconfig.org/)
 
-这是我一般常用的配置
+这是一般常用的配置
 
 ```
 # editorconfig.org
@@ -85,7 +88,8 @@ trim_trailing_whitespace = false
 
 对于代码重构的话，肯定少不了 `lint`。目前比较流行的主要有 [JSLint](http://jshint.com/docs/) 和 [ESLint](http://eslint.org/)，我选择 `ESLint`，因为它更灵活，可配置性高，并且有社区活跃用户在维持。 
 
-使用 `ESLint` 需要安装 [Nodejs](http://nodejs.org/)，嗷，`Nodejs` 6.0 已经支持93%(记得是)的特性了，真棒！以后可以少用 `Babel` 了。 
+使用 `ESLint` 需要安装 [Node.js](http://nodejs.org/)，嗷，`Node.js` 6.0 已经支持93%(记得是)的特性了，
+真棒！以后写 `Node.js` 可以少用 `Babel` 了。 
 然后全局安装 `ESLint`, `npm i -g eslint`。那么已经可以在命令行里使用了。
 
 要在 `Sublime` 中配置的话，需要安装插件 [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) 和 [SublimeLinter-contrib-eslint](https://github.com/roadhump/SublimeLinter-eslint), 
@@ -129,7 +133,7 @@ trim_trailing_whitespace = false
 [4]: https://github.com/feross/standard/blob/master/RULES.md#semicolons
 [5]: https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
 
-所以每次开始一个项目的时候，我总是 `eslint --init` 之后选择 `Standard`，然后加一些插件就 OK 了。
+每次开始一个项目的时候，需要 `eslint --init`，然后选择 `Standard`，再安装一些依赖模块就 OK 了。
 
 ![sublime lint](./sublime.png)
 
