@@ -15,3 +15,8 @@
 [在 Chrome 里调试 Nodejs](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27#.1qfjn5eg1)
 
 [深入 delete](http://perfectionkills.com/understanding-delete/)
+
+
+### 网站/Blog
+
+[Perfection Kills](http://perfectionkills.com/) --- kangax

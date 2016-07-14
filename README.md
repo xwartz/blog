@@ -8,5 +8,9 @@
 # Theme
 [pupa-theme](https://github.com/xwartz/hexo-pupa-theme)
 
+# 资源
+
+[不错の哟](./SUMMARY.md)
+
 # License
 MIT © [xwartz](https://github.com/xwartz)
