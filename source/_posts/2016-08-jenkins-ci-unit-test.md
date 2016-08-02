@@ -1,5 +1,5 @@
 ---
-title: 前端单元测试 Jenkins 配置
+title: 前端单元测试 Jenkins 集成
 date: 2016-08-02 11:15:18
 tags:
   - code
