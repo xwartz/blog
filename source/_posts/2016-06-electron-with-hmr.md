@@ -6,6 +6,11 @@ tags:
   - hmr
 ---
 
+热模块替换大行其道，开发 `Electron` 应用也是要用用才好。
+
+<!-- more -->
+
+
 {% asset_img erb.png %}
 
 
@@ -19,7 +24,6 @@ tags:
 
 所以监听到变化之后，`Webpack` 尝试更新模块时，就查找不到 `hot-update.json` ，然后 `Webpack` 无法更新模块...
 
-<!-- more -->
 
 {% asset_img hmr-error.png %}
 

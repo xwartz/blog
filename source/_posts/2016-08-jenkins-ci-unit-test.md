@@ -6,13 +6,17 @@ tags:
   - 单元测试
 ---
 
+学习下 Jenkins，写个配置教程吧。
+
+<!-- more -->
+
+
 {% asset_img jenkins.png %}
 
 之前写过几篇关于前端[单元测试的文章](http://xwartz.github.io/pupa/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/)，现在结合项目简单写一下如何与 Jenkins 搭配集成。
 
 关于如何自己搭建 Jenkins 服务就不说了，直接看[官方教程](https://jenkins.io)。
 
-<!-- more -->
 
 ### 创建项目
 

@@ -6,11 +6,14 @@ tags:
  - 单元测试
 ---
 
-{% asset_img ill.png %}
-
-这是我在公司组内的一次 [talk](https://github.com/xwartz/pupa/blob/master/talk/js%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95.key)。
+这是我在公司组内的一次 Talk。
 
 <!-- more  -->
+
+
+{% asset_img ill.png %}
+
+[Key](https://github.com/xwartz/pupa/blob/master/talk/js%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95.key)。
 
 ### 测试框架
 

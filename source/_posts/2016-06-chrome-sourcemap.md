@@ -6,6 +6,10 @@ tags:
 
 ---
 
+其实已经很久没有使用 Chrome 的 source-map 功能了。
+
+<!-- more  -->
+
 `webpack` 非常火，它提供的 `HMR`(hot module replacement) 功能非常棒，修改代码无需刷新页面。那么在 `webpack` 出现之前，有什么好的方法呢。
 
 作为前端开发，`Chrome` 应该是大家最喜欢的浏览器之一，调试代码非常方便。
@@ -14,7 +18,6 @@ tags:
 
 如果你的项目已经用 `webpack` 了，那就不太需要使用这个功能了，`webpack` 提供的 `HMR` 功能，开发起来很方便。
 
-<!-- more  -->
 
 ### 添加文件夹到 Workspace
 

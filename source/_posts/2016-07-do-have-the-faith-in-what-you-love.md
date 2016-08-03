@@ -5,6 +5,12 @@ tags:
   - life
 ---
 
-{% asset_img o.jpg %}
+只是突然有所感触，毕竟是个凡人。
 
 <!-- more -->
+
+{% asset_img o.jpg %}
+
+这图作者 Alex Honnold
+
+[Instagram](https://www.instagram.com/alexhonnold/)

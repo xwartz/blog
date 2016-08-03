@@ -6,6 +6,10 @@ tags:
   - nodejs
 ---
 
+最近谷歌程序员动作挺大的，毕竟 Web 发家的，就是厉害啊。
+
+<!-- more -->
+
 看到 `Paul Irish` 更新的 `medium` 文章 [Debugging Node.js Nightlies with Chrome DevTools](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27#.f7ybt5s2m)，试了一发，顺便翻译下教程。
 
 {% asset_img debug.png %}
@@ -13,7 +17,6 @@ tags:
 Node.js Nightlies 版本已经支持使用 `Chrome` 浏览器来调试了，查看 [pull](https://github.com/nodejs/node/pull/6792)。
 
 
-<!-- more -->
 
 ### 如何使用
 

@@ -4,6 +4,10 @@ date: 2016-05-13 13:32:58
 tags: 翻译
 ---
 
+尝试着去翻译一下，希望往后能翻译点好文章啊什么的。
+
+<!-- more -->
+
 `npm` 文档翻译之 `package.json`, 原文链接 <https://docs.npmjs.com/files/package.json>
 
 package.json(5)
@@ -14,8 +18,6 @@ package.json(5)
 本文档包含所有的 `package.json` 文件配置说明。`package.json` 文件必须是真正的 `json` 对象，而不是 js 对象。
 
 本文档中描述的很多行为受到 `npm-config(7)` 配置文件的影响。
-
-<!-- more -->
 
 ### name
 

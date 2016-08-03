@@ -5,15 +5,13 @@ tags:
   - iterm
 ---
 
-{% asset_img iterm.png %}
-
 每天要对着命令行，当然得搞的漂亮点才行。
-
-专为自己折腾下命令行。
-
 
 <!-- more -->
 
+{% asset_img iterm.png %}
+
+专为自己折腾下命令行。
 
 ## iTerm2
 

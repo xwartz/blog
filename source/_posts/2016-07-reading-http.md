@@ -5,6 +5,10 @@ tags:
   - books
 ---
 
+学习 HTTP。
+
+<!-- more -->
+
 占坑，持续更新中...
 
 `Cache-Control`: `no-cache` 和 `Cache-Control`: `no-store` 的差别
@@ -13,7 +17,6 @@ tags:
 
 `no-store` 才是真正的不进行缓存。
 
-<!-- more -->
 
 ## HTTP 响应状态码
 

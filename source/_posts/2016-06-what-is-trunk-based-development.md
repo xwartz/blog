@@ -7,6 +7,9 @@ tags:
   - gitflow
 ---
 
+除了 gitflow 之外的 git 分支管理方式推荐。
+
+<!-- more -->
 
 今天在逛 [ruby](https://ruby-china.org/) 论坛，看到个帖子 [GIT 之我见 - 反驳 TW 洞见《GITFLOW 有害论》](https://ruby-china.org/topics/29263)。
 然后又点开了 [GITFLOW有害论](http://insights.thoughtworkers.org/gitflow-consider-harmful)，挺有意思的讨论。
@@ -17,7 +20,6 @@ tags:
 
 这篇文章主要介绍下 [Trunk Based Development](http://paulhammant.com/2013/04/05/what-is-trunk-based-development/)，提供一个不同的分支管理理念。
 
-<!-- more -->
 
 ### 什么是 Trunk Based Development
 
