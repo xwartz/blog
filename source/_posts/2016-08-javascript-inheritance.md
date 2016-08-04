@@ -125,7 +125,7 @@ function Bar(x, y) {
   this.y = y
 }
 // 继承原型链上的属性
-// 这里有个明显不好的地方是会在 Bar 原型连上产生一个 x undefined
+// 这里有个不优雅的地方是会在 Bar 原型连上产生一个 Foo 自身的属性 x undefined
 Bar.prototype = new Foo()
 
 // 如果 Bar.prototype = Foo.prototype, 除了构造函数 Bar 和 Foo 其实是一样的
@@ -140,8 +140,8 @@ bar.__proto__.__proto__ === foo.__proto__ // true
 
 ##### 总得来说，要实现继承分两步走：
 
-1. 继承构造函数的属性(方法)
-2. 继承原型链上的属性(方法)
+1. 继承构造函数里的属性(父类自身的属性)
+2. 继承原型链上的属性
 
 
 ### Object.create 实现继承
@@ -150,7 +150,7 @@ bar.__proto__.__proto__ === foo.__proto__ // true
 
 *这是一个 `ES5` 中的方法，IE >= 9。*
 
-使用 `Object.create()` 来解决上面原型链产生 `undefined` 的问题。
+使用 `Object.create()` 来解决上面子类原型链上产生父类自身属性的问题。
 
 ```js
 
@@ -181,22 +181,25 @@ bar.__proto__.__proto__ === foo.__proto__ // true
 ```
 
 
-### Class 关键字
+### class 关键字
 
-ES6 加入语法糖 `Class`，实现继承就更加方便一些了。
+ES6 加入语法糖 `class`，实现继承就更加方便一些了。
 
 ```js
 class Foo {
+  // 构造函数
   constructor(x) {
     this.x = x
   }
 
+  // 原型链上的方法
   fn () {
     console.log(this.x)
   }
 }
 
 class Bar extends Foo {
+  // 子类构造函数
   constructor(x, y) {
     super(x) // 访问父对象上的构造函数
     this.y = y
@@ -238,7 +241,7 @@ var baz = new Baz(1,2) // {x: 1, y: 2}
 
 ```
 
-以上看起来 baz 的属性 `{x: 1, y: 2}` 中包含了 `Foo` 和 `Bar` 的属性，但是更改 `Foo` 的原型，并不会被继承下来。
+以上看起来 baz 的属性 `{x: 1, y: 2}` 中包含了 `Foo` 和 `Bar` 的属性，但是更新 `Foo` 的原型链上的属性，并不会被继承下来。
 
 ```js
 Foo.prototype.fn = function () {}
