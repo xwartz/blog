@@ -33,6 +33,15 @@ var foo = {
 
 对象原型指定可以使用 `__proto__` 属性。
 
+<p class='tip'>
+根据 ECMAScript 标准，someObject.[[Prototype]] 符号是用于指派 someObject 的原型。
+这个等同于 JavaScript 的 `__proto__`  属性（现已弃用）。
+从 ECMAScript 6 开始, [[Prototype]] `可以用 Object.getPrototypeOf()` 和 `Object.setPrototypeOf()` 访问器来访问。
+</p>
+
+也就是说，以下涉及到 `__proto__` 的方式，都可以使用 `Object.getPrototypeOf()` 来获取原型，或者使用 `Object.setPrototypeOf()` 来设置原型。
+
+
 ```js
 var a = {
   x: 1,
@@ -41,19 +50,13 @@ var a = {
 
 var b = {}
 
-b.__proto__ = a // 将对象的原型指向 a
+b.__proto__ = a // 将对象的原型指向 a, 等同于 b = Object.setPrototypeOf({}, a)
 
 b.x // 1
 b.y // 2
 ```
 
 其实 `new` 关键字会做类似的操作，在构造函数下会做说明。
-
-<p class='tip'>
-根据 ECMAScript 标准，someObject.[[Prototype]] 符号是用于指派 someObject 的原型。
-这个等同于 JavaScript 的 `__proto__`  属性（现已弃用）。
-从 ECMAScript 6 开始, [[Prototype]] `可以用 Object.getPrototypeOf()` 和 `Object.setPrototypeOf()` 访问器来访问。
-</p>
 
 
 ### 构造函数
@@ -76,7 +79,7 @@ var b = new Foo(2)
 b.x // 1
 b.y // 2
 
-b.__proto__ === Foo.prototype // true
+b.__proto__ === Foo.prototype // true, 等同于 Object.setPrototypeOf(b) === Foo.prototype
 
 // constructor 返回一个指向创建了该对象原型的函数引用
 b.constructor === Foo // true
