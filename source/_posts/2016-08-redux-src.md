@@ -5,9 +5,11 @@ tags:
   - code
 ---
 
-Redux 为 JavaScript 应用提供可预测化的状态管理。
+使用 `Redux` 这么久，理一下。
 
 <!-- more -->
+
+Redux 为 JavaScript 应用提供可预测化的状态管理。
 
 ### 原理
 
@@ -15,17 +17,20 @@ Redux 为 JavaScript 应用提供可预测化的状态管理。
 
 ![flow](./flow.gif)
 
+(ps：其实图中的 `Dispatcer` 并不太准确，`Redux` 没有专门的 `Dispatcher`, 数据的更新是通过 `store` 中的 `dispatch` 方法。)
 
-从上图我们可以看到清晰的数据流向: `View` 触发数据更新 ---> `Actions` 将数据传递到 `Store` ---> `Store` 更新 `state`。
+从上图我们可以看到清晰的数据流向: `View` 触发数据更新 ---> `Actions` 将数据传递到 `Store` ---> `Store` 更新 `state` ---> 更新 `View`。
 
-`Redux` 中整个应用的状态存储在一颗 `object tree` 中，对应一个唯一的 `Store`，并且 `state` 是只读的，使用纯函数 `reducer` 来更新 `state` 会生成一个新的 `state` 而不是直接修改原来的。`Redux` 通过以上约束试图让 `state` 的变化变得可预测。
+`Redux` 中整个应用的状态存储在一颗 `object tree` 中，对应一个唯一的 `Store`，并且 `state` 是只读的，使用纯函数 `reducer` 来更新 `state` 会生成一个新的 `state` 而不是直接修改原来的。
+
+`Redux` 通过以上约束试图让 `state` 的变化可预测。
 
 
 ### 源码分析
 
-`Redux` 的源码非常少，但是却能实现这样的功能，非常值得阅读学习，就像 `TJ` 写的 `co` 一样。
+`Redux` 的源码非常少，但是却实现了这样一个数据流的管理，非常值得阅读学习。
 
-但是 `Redux` 的源码并不是非常容易理解的，包含很多闭包和高阶函数的使用导致理解起来有点绕。
+`Redux` 的源码并不是非常容易理解的，包含很多闭包和高阶函数的使用导致理解起来有点绕。
 
 了解了原理之后，对 `Redux` 源码的分析，就简单许多。
 
@@ -66,7 +71,9 @@ export {
 
 ```
 
-从上面可以看出，`Redux` 暴露的顶层 `API` 就只有 4 个。接下来分析每个 `API` 。
+从上面可以看出，`Redux` 暴露的顶层 `API` 就只有 4 个。
+
+接下来分析每个 `API` 。
 
 #### createStore.js
 
@@ -216,7 +223,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
 比如有 `reducer`: r1, r2, r3; 
 将 `{ r1, r2, r3 }` 传入 `combineReducers` 将返回一个可以产生这样的 `state`: `{ r1: {}, r2: {}, r3: {} }`  的函数。
 
-其中很长一段代码都是对 `reducers` 健壮性的检测，这里只需要分析下 `combineReducers` 函数的实现，一些代码已经删除掉了。
+其中很长一段代码都是对 `reducers` 合法性的检测，这里只需要分析下 `combineReducers` 函数的实现，一些代码已经删除掉了。
 
 ```js
 
@@ -298,6 +305,8 @@ export default function bindActionCreators(actionCreators, dispatch) {
 
 `compose` 的作用是从右到左来组合多个函数，不使用深度右括号的情况下来写深度嵌套的函数，内部实现其实就是一个 `reduceRight`。
 
+关于 `reduceRight`, 查看 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
+
 比如 `a(b(c()))` 可以这样写 `compose(a,b,c)`。
 
 ```js
@@ -313,7 +322,6 @@ export default function compose(...funcs) {
 
   const last = funcs[funcs.length - 1]
   const rest = funcs.slice(0, -1)
-  // 关于 reduceRight, 查看 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
   return (...args) => rest.reduceRight((composed, f) => f(composed), last(...args))
 }
 
@@ -321,16 +329,19 @@ export default function compose(...funcs) {
 
 #### applyMiddleware.js
 
-`applyMiddleware` 函数返回一个应用了 `middleware` 后的 `store enhancer`。
-这个 `store enhancer` 就是一个函数，并且需要应用到 `createStore`。
-它会返回一个应用了 `middleware` 的新的 `createStore`。
+`applyMiddleware` 最终返回的是一个作用了 `middlewares` 的 `store`。
 
+之后 `store.dispatch` 的调用都会经历各个 `middleware`，所以你就可以在中间件中做一些额外的事情，比如打印日志。
 
 ```js
 import compose from './compose'
 
 export default function applyMiddleware(...middlewares) {
-  return (createStore) => (reducer, preloadedState, enhancer) => {
+  // 返回一个接收 createStore 的函数
+  return (createStore) => 
+    // 返回一个接收 reducer, preloadedState, enhancer 的函数
+    (reducer, preloadedState, enhancer) => {
+    // 创建 store
     var store = createStore(reducer, preloadedState, enhancer)
     var dispatch = store.dispatch
     var chain = []
@@ -339,9 +350,12 @@ export default function applyMiddleware(...middlewares) {
       getState: store.getState,
       dispatch: (action) => dispatch(action)
     }
+    // 作用每个 middleware
     chain = middlewares.map(middleware => middleware(middlewareAPI))
+    // 将 dispatch 传给最后一个 middleware
     dispatch = compose(...chain)(store.dispatch)
 
+    // 返回作用 middleware 之后的 store
     return {
       ...store,
       dispatch
@@ -350,7 +364,37 @@ export default function applyMiddleware(...middlewares) {
 }
 ```
 
+每个 `middleware` 接受 `Store` 的 `dispatch` 和 `getState` 函数作为命名参数，并返回一个函数。
+该函数会被传入 被称为 `next` 的下一个 `middleware` 的 `dispatch` 方法，并返回一个接收 `action` 的新函数，
+这个函数可以直接调用 `next(action)`，或者在其他需要的时刻调用，甚至根本不去调用它。
 
-### Over
+调用链中最后一个 `middleware` 会接受真实的 `store` 的 `dispatch` 方法作为 `next` 参数，并借此结束调用链。
 
-`Redux` 的作用是来管理 `state`，是状态的改变可控，也就是 `state` 在什么时候，由于什么原因如何变化，都可以方便的查找到。
+所以，`middleware` 的函数签名是 `({ getState, dispatch }) => next => action`。
+
+一个简单 `middleware` 可以这样写：
+
+```js
+function logger({ getState }) {
+  return (next) => (action) => {
+    console.log('will dispatch', action)
+
+    // 调用 middleware 链中下一个 middleware 的 dispatch。
+    let returnValue = next(action)
+
+    console.log('state after dispatch', getState())
+
+    // 一般会是 action 本身，除非
+    // 后面的 middleware 修改了它。
+    return returnValue
+  }
+}
+```
+
+当调用 `store.dispatch` 之后，会打印出 `will dispatch xxx`, `state after dispatch xxx` 信息。
+
+### 结论
+
+`Redux` 的代码里使用高阶函数来简化代码，但是让人阅读起来并不容易理解，总感觉有些绕。
+
+感觉自己平时多层嵌套函数用的太少了，逻辑都快转不过来了...
