@@ -8,7 +8,11 @@
   "scripts": {
     "deploy": "hexo generate --deploy",
     "build": "hexo generate",
-    "start": "hexo server"
+    "server": "hexo server",
+    "log": "pm2 logs",
+    "stop": "pm2 stop eco.json && pm2 delete eco.json",
+    "start": "pm2 start eco.json && npm run log",
+    "restart": "npm run stop && npm run start"
   },
   "dependencies": {
     "hexo": "^3.2.0",
@@ -26,5 +30,8 @@
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.2.0",
     "hexo-wordcount": "^1.2.0"
+  },
+  "devDependencies": {
+    "pm2": "^1.1.3"
   }
 }
