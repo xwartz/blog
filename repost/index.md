@@ -16,6 +16,10 @@
 
 [深入 delete](http://perfectionkills.com/understanding-delete/)
 
+[跟我一起部署和定制 CNPM——基础部署](http://f2e.souche.com/blog/let-cnpm-base-deploy/)
+
+[跟我一起部署和定制 CNPM——自定义包存储层](http://f2e.souche.com/blog/lets-cnpm-storage/)
+
 
 ### 网站/Blog
 
