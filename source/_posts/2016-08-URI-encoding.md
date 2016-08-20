@@ -77,13 +77,7 @@ tags:
 
 获取 `URI` 参数的正确姿势：
 
-```js
-let getQueryString = (key, queryStr = location.search + location.hash) => {
-  let reg = new RegExp('(^|\\?|&)' + key + '=([^&]*)(\\s|&|$)', 'i')
-  return reg.test(queryStr) ? decodeURIComponent(RegExp.$2) : ''
-}
-```
-
+<script src="https://gist.github.com/xwartz/12678ec6278e4ff9e0bf892d9db2186f.js"></script>
 
 ### 总结
 
