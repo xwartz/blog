@@ -2,7 +2,7 @@
 title: URI 编码
 date: 2016-08-20 17:59:04
 tags: 
-  -code
+  - code
 ---
 
 `URI` 编码时遇到的坑。
