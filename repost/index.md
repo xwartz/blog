@@ -20,6 +20,8 @@
 
 [跟我一起部署和定制 CNPM——自定义包存储层](http://f2e.souche.com/blog/lets-cnpm-storage/)
 
+[react组件性能优化探索实践](http://imweb.io/topic/577512fe732b4107576230b9)
+
 
 ### 网站/Blog
 
