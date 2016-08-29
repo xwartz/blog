@@ -29,7 +29,7 @@ skip_render:
 
 # Writing
 # 新文章的文件名称
-new_post_name: :year-:month-:title.md # File name of new posts
+new_post_name: :year/:month/:title.md # File name of new posts
 # 预设布局
 default_layout: post
 # Transform title into titlecase

@@ -5,11 +5,9 @@ comments: false
 layout: page
 ---
 
-Developer, Web Designer & Writing.
+Developer, Web Designer.
 
 <!-- more -->
-
-I am currently living in HangZhou, China.
 
 ### Projects
 
