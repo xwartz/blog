@@ -1,0 +1,66 @@
+mixin postInfo(item)
+  .entry-meta
+    time.updated(itemprop='datePublished' datetime=full_date(item.date, 'dddd, MMMM Do YYYY, h:mm:ss a'))
+      != full_date(item.date, 'll')
+    em.post-count
+      != wordcount(item.content) + ' words'
+
+mixin postCover(item)
+  article.entry-item(itemscope itemtype='http://schema.org/Article')
+    .post-cover(itemprop='cover' background= item.cover ? item.cover : theme.postCover)
+    a(href= url_for(item.path) itemprop='url')
+      h2.post-name(itemprop='name')
+        != item.title
+      .post-content(itemprop='description')
+        != item.excerpt
+
+//- Index Page
+mixin posts()
+  .entry-header
+    .container
+      h1.entry-title
+        != config.title
+  .container
+    .entry-list
+      - page.posts.each(function (item) {
+          +postCover(item)
+      - })
+
+//- Archive Page
+mixin postList()
+  .archive-list
+    - var posts = _.groupBy(page.posts, function (item) {
+        return date(item.date, 'MMMM, YYYY')
+    - })
+    .container
+    - for (var key in posts) {
+      .entry-header
+        h1.entry-title
+          != key
+      .entry-list
+        - var items = posts[key]
+        - items.each(function (item) {
+            +postCover(item)
+        - })
+    - }
+
+//- Post Page
+mixin post(item)
+  .post
+    article.hentry(itemscope itemtype='http://schema.org/Article')
+      .entry-header
+        .container
+          h1.entry-title
+            != item.title
+          .entry-description
+            != item.excerpt
+          +postInfo(item)
+      .entry-content.container(itemprop='articleBody')
+        != item.more
+      .entry-extra.container
+        .entry-tags
+          if item.tags && item.tags.length
+            - item.tags.each(function(tag){
+              a.tag(href=url_for(tag.path))
+                != tag.name
+            - })

@@ -1,0 +1,53 @@
+.pupa .entry-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.entry-meta {
+  font-size: 14px;
+  font-family: "Optima", "Helvetica Neue", sans-serif;
+  color: #999;
+
+  .updated::after {
+    content: " — ";
+  }
+
+  em {
+    font-size: 13px;
+    color: #999;
+  }
+
+}
+
+.entry-list {
+
+  .entry-item {
+    margin: 25px 0 35px;
+    line-height: 25px;
+    min-height: 50px;
+  }
+
+
+  h2 {
+    margin: 8px 0 12px;
+    font-size: 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .read-more {
+    border-color: $l-color;
+    font-size: 16px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $l-color;
+  }
+
+}

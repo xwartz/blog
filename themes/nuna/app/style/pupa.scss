@@ -1,0 +1,163 @@
+
+.pupa {
+  font: 400 18px/1.75 "Georgia", "Xin Gothic", "PingFang TC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  color: #444443;
+}
+
+.pupa ::-moz-selection {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.pupa ::selection {
+  background-color: rgba(0,0,0,0.2);
+}
+
+.pupa {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Georgia", "Xin Gothic", "PingFang TC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+      color: #222223;
+    }
+}
+
+.pupa h1 {
+  font-size: 1.8em;
+  margin: 0.67em 0;
+}
+
+.pupa > h1 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.pupa h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+.pupa h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+.pupa h4,
+.pupa h5,
+.pupa h6 {
+  font-size: 1em;
+  margin: 1.6em 0 1em 0;
+}
+
+.pupa h6 {
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.46em;
+}
+
+.pupa a {
+  color: #111;
+  word-wrap: break-word;
+  -moz-text-decoration-color: rgba(0, 0, 0, 0.4);
+  text-decoration-color: rgba(0, 0, 0, 0.4);
+}
+
+.pupa a:hover {
+  color: #555;
+  -moz-text-decoration-color: rgba(0, 0, 0, 0.6);
+  text-decoration-color: rgba(0, 0, 0, 0.6);
+}
+
+.pupa h1 a,
+.pupa h2 a,
+.pupa h3 a {
+  text-decoration: none;
+}
+
+.pupa strong,
+.pupa b {
+  font-weight: 700;
+  color: #222223;
+}
+
+.pupa em,
+.pupa i {
+  font-style: italic;
+  color: #222223;
+}
+
+.pupa img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.2em 0;
+}
+
+.pupa a img {
+  /* Remove border on IE */
+  border: none;
+}
+
+.pupa hr {
+  display: block;
+  width: 14%;
+  margin: 40px auto 34px;
+  border: 0 none;
+  border-top: 3px solid #dededc;
+}
+
+.pupa ul,
+.pupa ol {
+  margin: 0 0 24px 6px;
+  padding-left: 16px;
+}
+
+.pupa ul {
+  list-style-type: square;
+}
+
+.pupa ol {
+  list-style-type: decimal;
+}
+
+.pupa li {
+  margin-bottom: 0.2em;
+}
+
+.pupa li ul,
+.pupa li ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 14px;
+}
+
+.pupa li ul {
+  list-style-type: disc;
+}
+
+.pupa li ul ul {
+  list-style-type: circle;
+}
+
+.pupa li p {
+  margin: 0.4em 0 0.6em;
+}
+
+.pupa .unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pupa .disabled {
+  color: #555;
+  opacity: 0.8;
+}
+
+span.sep {
+  padding: 0 20px;
+}

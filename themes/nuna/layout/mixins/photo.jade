@@ -1,0 +1,12 @@
+//- photo
+mixin photo(item)
+  .post.photo
+    article.hentry(itemscope='' itemtype='http://schema.org/Article')
+      div.entry-header
+        div.container
+          h1.entry-title
+            != item.title
+          div.entry-description
+            != item.excerpt
+      .entry-content.container(itemprop='articleBody')
+        != item.more
