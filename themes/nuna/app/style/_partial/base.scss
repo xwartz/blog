@@ -118,13 +118,10 @@ main {
 =======
 =======
     color: $black;
-    line-height: 1.5;
+    line-height: 1.75;
     background-color: $base-bg;
 >>>>>>> a7dccb4... Fix home page && archive page layout
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga" on;
 }
 
 a {
@@ -207,6 +204,7 @@ main {
 * {
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 .logo {
@@ -219,3 +217,5 @@ main {
     color: #f9f9f9;
 >>>>>>> a7dccb4... Fix home page && archive page layout
 }
+=======
+>>>>>>> a0b1d6f... A new style

@@ -12,11 +12,15 @@ mixin postInfo(item)
 mixin postCover(item, flag)
   article.entry-item(itemscope itemtype='http://schema.org/Article')
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a0b1d6f... A new style
     if flag
         - var defthumb = theme.thumb + 'thumb-' + thumbs.pop() + '.png'
         - var coverUrl = item.thumb ? item.path + item.thumb : url_for(defthumb)
         .post-thumb(itemprop='thumb' style= 'background-image: url(#{coverUrl})')
 
+<<<<<<< HEAD
 =======
     - var coverUrl = item.cover ? item.path + item.cover : url_for(theme.postCover)
 <<<<<<< HEAD
@@ -25,6 +29,8 @@ mixin postCover(item, flag)
 =======
     .post-cover(itemprop='cover' style= 'background-image: url(#{coverUrl})')
 >>>>>>> a7dccb4... Fix home page && archive page layout
+=======
+>>>>>>> a0b1d6f... A new style
     a(href= url_for(item.path) itemprop='url')
       h3.post-name(itemprop='name')
         != item.title
@@ -34,10 +40,14 @@ mixin postCover(item, flag)
 //- Index Page
 mixin home()
 <<<<<<< HEAD
+<<<<<<< HEAD
     .container.home
 =======
     .home
 >>>>>>> a7dccb4... Fix home page && archive page layout
+=======
+    .container.home
+>>>>>>> a0b1d6f... A new style
         .entry-header
             h1.entry-title
                 != config.title
@@ -45,6 +55,7 @@ mixin home()
                 != config.description
         .entry-list
             - page.posts.each(function (item) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 +postCover(item, true)
             - })
@@ -62,6 +73,9 @@ mixin postList()
     .container
 =======
                 +postCover(item)
+=======
+                +postCover(item, true)
+>>>>>>> a0b1d6f... A new style
             - })
 
 //- Archive Page
@@ -70,7 +84,11 @@ mixin archive()
 >>>>>>> a7dccb4... Fix home page && archive page layout
         - var year = 0
         - var change = false
+<<<<<<< HEAD
 >>>>>>> c6be0ce... Handle gulp error
+=======
+
+>>>>>>> a0b1d6f... A new style
         - page.posts.each(function (item) {
             - var d = date(item.date, 'MMM, YYYY')
             - change = year !== d
@@ -93,6 +111,9 @@ mixin archive()
 //- Post Page
 mixin post(item)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a0b1d6f... A new style
     .post
         article.hentry(itemscope itemtype='http://schema.org/Article')
             if item.cover
@@ -114,6 +135,7 @@ mixin post(item)
                                 a.tag(href=url_for(tag.path))
                                     != tag.name
                             - })
+<<<<<<< HEAD
 =======
   .post
     article.hentry(itemscope itemtype='http://schema.org/Article')
@@ -133,3 +155,5 @@ mixin post(item)
                 != tag.name
             - })
 >>>>>>> a7dccb4... Fix home page && archive page layout
+=======
+>>>>>>> a0b1d6f... A new style
