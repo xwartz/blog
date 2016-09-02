@@ -1,6 +1,7 @@
 ---
 title: JavaScript 继承
 date: 2016-08-04 09:30:20
+cover: cover.png
 tags:
 - code
 ---

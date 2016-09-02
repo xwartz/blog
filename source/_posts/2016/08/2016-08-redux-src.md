@@ -1,6 +1,7 @@
 ---
 title: Redux 解析
 date: 2016-08-09 15:29:18
+cover: cover.png
 tags:
   - code
 ---
