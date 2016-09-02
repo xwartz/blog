@@ -6,7 +6,7 @@
 [![Dependency Status](https://david-dm.org/xwartz/pupa.svg)](https://david-dm.org/xwartz/pupa)
 
 # Theme
-[hexo-pupa-theme](https://github.com/xwartz/hexo-pupa-theme)
+[hexo-theme-nuna](https://github.com/xwartz/hexo-theme-nuna)
 
 # 分享
 
