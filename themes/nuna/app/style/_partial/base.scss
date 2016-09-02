@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 $base-bg: #fafafa;
 $base-link-color: #434344;
+=======
+>>>>>>> c6be0ce... Handle gulp error
 
 html, body {
     padding: 0;
     margin: 0;
+<<<<<<< HEAD
     font-size: 16px;
+=======
+    font-size: 18px;
+>>>>>>> c6be0ce... Handle gulp error
 }
 
 body {
@@ -12,6 +19,7 @@ body {
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
+<<<<<<< HEAD
     color: $black;
     line-height: 1.75;
     background-color: $base-bg;
@@ -97,4 +105,55 @@ main {
 
 * {
     box-sizing: border-box;
+=======
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    color: rgba(0,0,0,.8);
+    line-height: 1.5;
+}
+
+::selection {
+    background-color: #222;
+    color: #f9f9f9;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    max-width: 960px;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+    zoom: 1;
+}
+
+.container:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+a {
+    color: #434344;
+    transition: all 0.25s ease-in;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+figcaption > span {
+    display: block;
+    padding: 5px;
+}
+
+.logo {
+    width: 24px;
+    height: 24px;
+>>>>>>> c6be0ce... Handle gulp error
 }

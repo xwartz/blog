@@ -2,15 +2,25 @@
 mixin page(item)
     .post.page
         article.hentry(itemscope itemtype='http://schema.org/Article')
+<<<<<<< HEAD
             if item.image
                 .entry-cover(itemprop='image' style= 'background-image: url(#{item.image})')
 
             .container
                 .entry-header
+=======
+            .entry-header
+                .container
+>>>>>>> c6be0ce... Handle gulp error
                     h1.entry-title
                         != item.title
                     .entry-description
                         != item.excerpt
+<<<<<<< HEAD
 
                 .entry-content(itemprop='articleBody')
                     != item.more
+=======
+            .entry-content.container(itemprop='articleBody')
+                != item.more
+>>>>>>> c6be0ce... Handle gulp error

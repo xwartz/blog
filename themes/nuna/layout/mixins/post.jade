@@ -11,11 +11,16 @@ mixin postInfo(item)
 
 mixin postCover(item, flag)
   article.entry-item(itemscope itemtype='http://schema.org/Article')
+<<<<<<< HEAD
     if flag
         - var defthumb = theme.thumb + 'thumb-' + thumbs.pop() + '.png'
         - var coverUrl = item.thumb ? item.path + item.thumb : url_for(defthumb)
         .post-thumb(itemprop='thumb' style= 'background-image: url(#{coverUrl})')
 
+=======
+    - var coverUrl = item.cover ? item.path + item.cover : url_for(theme.postCover)
+    .post-cover(itemprop='cover' style= 'background: url(#{coverUrl})')
+>>>>>>> c6be0ce... Handle gulp error
     a(href= url_for(item.path) itemprop='url')
       h3.post-name(itemprop='name')
         != item.title
@@ -36,18 +41,30 @@ mixin home()
             - })
 
 //- Archive Page
+<<<<<<< HEAD
 mixin archive()
     .archive
         - var year = 0
         - var change = false
 
+=======
+mixin postList()
+  .archive-list
+    .container
+        - var year = 0
+        - var change = false
+>>>>>>> c6be0ce... Handle gulp error
         - page.posts.each(function (item) {
             - var d = date(item.date, 'MMM, YYYY')
             - change = year !== d
             - year = change ? d : year
             if change
                 .entry-header
+<<<<<<< HEAD
                     h2.entry-title
+=======
+                    h1.entry-title
+>>>>>>> c6be0ce... Handle gulp error
                         != year
             +postCover(item)
         - })
