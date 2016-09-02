@@ -36,23 +36,26 @@
             }
 
             > a {
-                height: 100%;
+                opacity: 1;
             }
         }
 
-        .post-cover {
+        .post-thumb {
             width: 100%;
             height: 100%;
             background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
         }
 
         > a {
+            opacity: 0;
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 0%;
+            height: 100%;
+            padding: 0.5rem;
             overflow: hidden;
             color: #fff;
             background-color: rgba(0, 0, 0, 0.4);
@@ -78,7 +81,7 @@
 .paginator {
     margin-top: 4rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 

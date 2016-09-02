@@ -6,8 +6,8 @@ menu:
 favicon: /logo.png
 logo: /logo.png
 
-# 文章默认封面
-postCover: /not-available.jpg
+# 首页文章默认封面路径
+thumb: /thumb/
 
 # Comment
 # e.g disqus: seansun
@@ -22,8 +22,3 @@ ga: UA-69822347-1
 
 # Copyright Infomation
 startyear: 2015
-
-# Font CDN
-#true : use google fonts api, not stable for chinese visitor sometimes, caused by force majeure factor
-#false: use useso fonts api instead of google's, great response speed for chinese visitor
-googlefonts: false

@@ -1,3 +1,7 @@
+
+//- 生成随机不重复数
+- var thumbs = [0,1,2,3,4,5,6,7,8,9].sort(function(){return 0.5 - Math.random()})
+
 mixin postInfo(item)
   .entry-meta
     time.updated(itemprop='datePublished' datetime=full_date(item.date, 'dddd, MMMM Do YYYY, h:mm:ss a'))
@@ -5,10 +9,13 @@ mixin postInfo(item)
     em.post-count
       != wordcount(item.content) + ' words'
 
-mixin postCover(item)
+mixin postCover(item, flag)
   article.entry-item(itemscope itemtype='http://schema.org/Article')
-    - var coverUrl = item.cover ? item.path + item.cover : url_for(theme.postCover)
-    .post-cover(itemprop='cover' style= 'background-image: url(#{coverUrl})')
+    if flag
+        - var defthumb = theme.thumb + 'thumb-' + thumbs.pop() + '.png'
+        - var coverUrl = item.thumb ? item.path + item.thumb : url_for(defthumb)
+        .post-thumb(itemprop='thumb' style= 'background-image: url(#{coverUrl})')
+
     a(href= url_for(item.path) itemprop='url')
       h3.post-name(itemprop='name')
         != item.title
@@ -17,7 +24,7 @@ mixin postCover(item)
 
 //- Index Page
 mixin home()
-    .home
+    .container.home
         .entry-header
             h1.entry-title
                 != config.title
@@ -25,7 +32,7 @@ mixin home()
                 != config.description
         .entry-list
             - page.posts.each(function (item) {
-                +postCover(item)
+                +postCover(item, true)
             - })
 
 //- Archive Page
@@ -33,6 +40,7 @@ mixin archive()
     .archive
         - var year = 0
         - var change = false
+
         - page.posts.each(function (item) {
             - var d = date(item.date, 'MMM, YYYY')
             - change = year !== d
@@ -46,20 +54,24 @@ mixin archive()
 
 //- Post Page
 mixin post(item)
-  .post
-    article.hentry(itemscope itemtype='http://schema.org/Article')
-      .entry-header
-          h1.entry-title
-            != item.title
-          .entry-description
-            != item.excerpt
-          +postInfo(item)
-      .entry-content(itemprop='articleBody')
-        != item.more
-      .entry-extra
-        .entry-tags
-          if item.tags && item.tags.length
-            - item.tags.each(function(tag){
-              a.tag(href=url_for(tag.path))
-                != tag.name
-            - })
+    .post
+        article.hentry(itemscope itemtype='http://schema.org/Article')
+            if item.cover
+                .entry-cover(itemprop='image' style= 'background-image: url(#{item.cover})')
+
+            .container
+                .entry-header
+                    h1.entry-title
+                        != item.title
+                    .entry-description
+                        != item.excerpt
+                    +postInfo(item)
+                .entry-content(itemprop='articleBody')
+                    != item.more
+                .entry-extra
+                    .entry-tags
+                        if item.tags && item.tags.length
+                            - item.tags.each(function(tag) {
+                                a.tag(href=url_for(tag.path))
+                                    != tag.name
+                            - })

@@ -13,12 +13,9 @@ body {
     font-weight: 400;
     font-style: normal;
     color: $black;
-    line-height: 1.5;
+    line-height: 1.75;
     background-color: $base-bg;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga" on;
 }
 
 a {
@@ -100,9 +97,4 @@ main {
 
 * {
     box-sizing: border-box;
-}
-
-::selection {
-    background-color: #222;
-    color: #f9f9f9;
 }
