@@ -7,7 +7,8 @@ mixin postInfo(item)
 
 mixin postCover(item)
   article.entry-item(itemscope itemtype='http://schema.org/Article')
-    .post-cover(itemprop='cover' background= item.cover ? item.cover : theme.postCover)
+    - var coverUrl = item.cover ? item.path + item.cover : url_for(theme.postCover)
+    .post-cover(itemprop='cover' style= 'background: url(#{coverUrl})')
     a(href= url_for(item.path) itemprop='url')
       h2.post-name(itemprop='name')
         != item.title
@@ -29,20 +30,19 @@ mixin posts()
 //- Archive Page
 mixin postList()
   .archive-list
-    - var posts = _.groupBy(page.posts, function (item) {
-        return date(item.date, 'MMMM, YYYY')
-    - })
     .container
-    - for (var key in posts) {
-      .entry-header
-        h1.entry-title
-          != key
-      .entry-list
-        - var items = posts[key]
-        - items.each(function (item) {
+        - var year = 0
+        - var change = false
+        - page.posts.each(function (item) {
+            - var d = date(item.date, 'MMM, YYYY')
+            - change = year !== d
+            - year = change ? d : year
+            if change
+                .entry-header
+                    h1.entry-title
+                        != year
             +postCover(item)
         - })
-    - }
 
 //- Post Page
 mixin post(item)

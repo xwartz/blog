@@ -1,14 +1,13 @@
 header {
-  padding: 20px 0;
-  border-bottom: 1px solid #f9f9f9;
+    padding: 20rem/$size 0;
+    border-bottom: 1px solid #f9f9f9;
 
   .container {
-    max-width: 860px;
+    max-width: 1010px;
   }
 
   a {
     color: #444;
-    font-family: "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
     text-transform: uppercase;
     text-decoration: none;
   }
@@ -35,19 +34,7 @@ nav {
   float: right;
 
   a {
-    font-size: 16px;
-    margin-right: 15px;
-    padding-bottom: 3px;
-    border-bottom: 2px solid transparent;
-
-    &:hover {
-      border-color: $l-color;
-    }
-
-    &.active {
-      border-bottom: 2px solid $l-color;
-    }
-
+    margin-right: 30rem/$size;
   }
 
 }

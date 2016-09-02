@@ -1,10 +1,10 @@
 header
-  .container
-    a.brand(href=url_for())
-      img.logo(src=theme.logo)
-    nav
-      each value, key in theme.menu
-        - var re = /^(http|https):\/\/*/gi;
-        - var tar = re.test(value) ? '_blank' : '_self'
-        a(class={active: is_current(value)} href=value target=tar)
-          != key
+    .container
+        a.brand(href=url_for())
+            img.logo(src=url_for(theme.logo))
+        nav
+            each value, key in theme.menu
+                - var re = /^(http|https):\/\/*/gi;
+                - var tar = re.test(value) ? '_blank' : '_self'
+                a(class={active: is_current(url_for(value))} href=url_for(value) target=tar)
+                    i(class='fa icon-#{key}')

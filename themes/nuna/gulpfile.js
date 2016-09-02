@@ -2,6 +2,7 @@ var gulp = require('gulp')
 var sass = require('gulp-sass')
 var autoprefixer = require('gulp-autoprefixer')
 var plumber = require('gulp-plumber')
+var notify = require('gulp-notify')
 
 var config = {
   style: './app/style',
@@ -10,7 +11,7 @@ var config = {
 
 gulp.task('sass', function () {
   return gulp.src(config.style + '/main.scss')
-    .pipe(plumber())
+    .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
     .pipe(sass({
       outputStyle: 'compressed'
     }))
@@ -18,6 +19,6 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(config.dest))
 })
 
-gulp.task('default', ['sass'], function () {
+gulp.task('default', function () {
   gulp.watch(config.style + '/**/*.scss', ['sass'])
 })

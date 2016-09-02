@@ -1,26 +1,9 @@
 .paginator {
-  padding: 20px 0;
+  padding: 20rem/$size 0;
   text-align: center;
-  font-size: 16px;
-  font-family: "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
 
   span {
     color: #656565;
-    font-weight: 300;
-  }
-
-  em:before,
-  em:after {
-    font-style: normal;
-    color: #999;
-    content: ' — ';
-  }
-
-  .previous:before {
-    content: "«";
-  }
-  .next:after {
-    content: "»";
   }
 
 }

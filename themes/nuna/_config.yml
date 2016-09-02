@@ -1,12 +1,10 @@
 menu:
-    Home: /pupa
-    Archive: /pupa/archives/
-    About: /pupa/about/
-    # GitHub: https://github.com/xwartz
-    # Rss: /atom.xml
+    home: /
+    archive: /archives/
+    about: /about/
 
 favicon: /logo.png
-logo: /pupa/logo.png
+logo: /logo.png
 
 # 文章默认封面
 postCover: /not-available.jpg

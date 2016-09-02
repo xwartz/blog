@@ -1,22 +1,22 @@
+$border-color: #eee;
+
 .entry-header {
 
     .container {
-      padding-top: 2em;
-      padding-bottom: 1em;
-      border-bottom: 1px solid #eee;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $border-color;
     }
 
     .entry-title {
       margin: 0;
-      padding: .6em 0;
+      padding: .6rem 0;
       font-size: 30px;
     }
 
     .entry-description {
       color: #787879;
-      font-size: 20px;
-      font-family: "Lucida Grande", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
-      -webkit-font-smoothing: antialiased;
+      font-size: 20rem/$size;
     }
 
     .entry-meta {
@@ -44,12 +44,12 @@
 .hentry {
 
     .entry-content {
-      padding-top: 2em;
+      padding-top: 2rem;
     }
 
     .entry-content h2 {
-      margin-top: 2em;
-      border-bottom: 1px solid #eee;
+      margin-top: 2rem;
+      border-bottom: 1px solid $border-color;
     }
 
     .entry-footer {
@@ -66,8 +66,8 @@
       border-bottom: 1px solid #999;
 
       &:hover {
-        color: $l-color;
-        border-color: $l-color;
+        color: $green;
+        border-color: $green;
       }
 
       &.img-link {
@@ -122,7 +122,7 @@
       &:before {
           display: none;
           content: "#";
-          color: #42b983;
+          color: $green;
           position: absolute;
           left: -0.7em;
           top: -4px;
