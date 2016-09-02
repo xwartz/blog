@@ -4,9 +4,10 @@ html(lang=config.language prefix='og: http://ogp.me/ns#')
         include head
     body
         include header
-        section.container
-            block container
-            block pagination
+        main
+            .container
+                block container
+                block pagination
         footer
             block copyright
         include scripts

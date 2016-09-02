@@ -8,29 +8,29 @@ mixin postInfo(item)
 mixin postCover(item)
   article.entry-item(itemscope itemtype='http://schema.org/Article')
     - var coverUrl = item.cover ? item.path + item.cover : url_for(theme.postCover)
-    .post-cover(itemprop='cover' style= 'background: url(#{coverUrl})')
+    .post-cover(itemprop='cover' style= 'background-image: url(#{coverUrl})')
     a(href= url_for(item.path) itemprop='url')
-      h2.post-name(itemprop='name')
+      h3.post-name(itemprop='name')
         != item.title
-      .post-content(itemprop='description')
+      .post-description(itemprop='description')
         != item.excerpt
 
 //- Index Page
-mixin posts()
-  .entry-header
-    .container
-      h1.entry-title
-        != config.title
-  .container
-    .entry-list
-      - page.posts.each(function (item) {
-          +postCover(item)
-      - })
+mixin home()
+    .home
+        .entry-header
+            h1.entry-title
+                != config.title
+            p.entry-description
+                != config.description
+        .entry-list
+            - page.posts.each(function (item) {
+                +postCover(item)
+            - })
 
 //- Archive Page
-mixin postList()
-  .archive-list
-    .container
+mixin archive()
+    .archive
         - var year = 0
         - var change = false
         - page.posts.each(function (item) {
@@ -39,7 +39,7 @@ mixin postList()
             - year = change ? d : year
             if change
                 .entry-header
-                    h1.entry-title
+                    h2.entry-title
                         != year
             +postCover(item)
         - })
@@ -49,15 +49,14 @@ mixin post(item)
   .post
     article.hentry(itemscope itemtype='http://schema.org/Article')
       .entry-header
-        .container
           h1.entry-title
             != item.title
           .entry-description
             != item.excerpt
           +postInfo(item)
-      .entry-content.container(itemprop='articleBody')
+      .entry-content(itemprop='articleBody')
         != item.more
-      .entry-extra.container
+      .entry-extra
         .entry-tags
           if item.tags && item.tags.length
             - item.tags.each(function(tag){

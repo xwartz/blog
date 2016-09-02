@@ -1,40 +1,37 @@
 header {
-    padding: 20rem/$size 0;
-    border-bottom: 1px solid #f9f9f9;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
 
-  .container {
-    max-width: 1010px;
-  }
+    a {
+        color: #aaa;
+    }
 
-  a {
-    color: #444;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
+    .container {
+        height: 78px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-  a:hover {
-    opacity: 1;
-    color: #222;;
-  }
+    .logo {
+        display: block;
 
-}
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
 
-.brand {
-  float: left;
-  cursor: pointer;
-  height: 24px;
+    .span-holder {
+        flex: 1;
+    }
 
-  &:hover {
-    opacity: .8;
-  }
+    nav {
 
-}
-
-nav {
-  float: right;
-
-  a {
-    margin-right: 30rem/$size;
-  }
+        a {
+            margin-left: 2rem;
+        }
+    }
 
 }

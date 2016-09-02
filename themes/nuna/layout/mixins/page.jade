@@ -3,10 +3,9 @@ mixin page(item)
     .post.page
         article.hentry(itemscope itemtype='http://schema.org/Article')
             .entry-header
-                .container
-                    h1.entry-title
-                        != item.title
-                    .entry-description
-                        != item.excerpt
-            .entry-content.container(itemprop='articleBody')
+                h1.entry-title
+                    != item.title
+                .entry-description
+                    != item.excerpt
+            .entry-content(itemprop='articleBody')
                 != item.more
