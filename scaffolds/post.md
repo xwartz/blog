@@ -1,6 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
-  -
+thumb: 'thumb.png'
+cover: 'cover.png'
+tags: -
 ---

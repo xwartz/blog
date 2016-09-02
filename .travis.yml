@@ -39,7 +39,7 @@ os:
 env:
   global:
     # 博客主题仓库
-    - GH_THEME: github.com/xwartz/hexo-pupa-theme.git
+    - GH_THEME: github.com/xwartz/hexo-theme-nuna.git
     # 博客仓库
     - GH_REF: github.com/xwartz/pupa.git
     # 加密的 token

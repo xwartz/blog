@@ -3,7 +3,7 @@
     "name": "dev-server",
     "script": "npm",
     "args": ["run", "server"],
-    "watch": ["./themes/**/*.jade", "./themes/**/*.css"],
+    "watch": ["./themes/**/*.jade"],
     "node_args": "",
     "merge_logs": true,
     "log_file": "logs/app.log",

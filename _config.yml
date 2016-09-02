@@ -64,18 +64,18 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 5
+per_page: 9
 pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: pupa
+theme: nuna
 
 # 在归档页面显示所有文章
 # 需要上面安装的 hexo-generator-archive 插件支持
 archive_generator:
-  per_page: 20
+  per_page: 15
   yearly: true
   monthly: true
   daily: false
