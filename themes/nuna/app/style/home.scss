@@ -36,6 +36,7 @@
             }
 
             > a {
+<<<<<<< HEAD
                 opacity: 1;
             }
         }
@@ -45,17 +46,34 @@
             height: 100%;
             background-size: cover;
             background-position: center;
+=======
+                height: 100%;
+            }
+        }
+
+        .post-cover {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+>>>>>>> a7dccb4... Fix home page && archive page layout
             background-repeat: no-repeat;
         }
 
         > a {
+<<<<<<< HEAD
             opacity: 0;
+=======
+>>>>>>> a7dccb4... Fix home page && archive page layout
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
+<<<<<<< HEAD
             height: 100%;
             padding: 0.5rem;
+=======
+            height: 0%;
+>>>>>>> a7dccb4... Fix home page && archive page layout
             overflow: hidden;
             color: #fff;
             background-color: rgba(0, 0, 0, 0.4);
@@ -81,7 +99,11 @@
 .paginator {
     margin-top: 4rem;
     display: flex;
+<<<<<<< HEAD
     justify-content: space-around;
+=======
+    justify-content: center;
+>>>>>>> a7dccb4... Fix home page && archive page layout
     align-items: center;
 }
 

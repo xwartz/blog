@@ -11,6 +11,7 @@ mixin photo(item)
                 .entry-header
 =======
             .entry-header
+<<<<<<< HEAD
                 .container
 >>>>>>> c6be0ce... Handle gulp error
                     h1.entry-title
@@ -23,5 +24,12 @@ mixin photo(item)
                     != item.more
 =======
             .entry-content.container(itemprop='articleBody')
+=======
+                h1.entry-title
+                    != item.title
+                .entry-description
+                        != item.excerpt
+            .entry-content(itemprop='articleBody')
+>>>>>>> a7dccb4... Fix home page && archive page layout
                 != item.more
 >>>>>>> c6be0ce... Handle gulp error

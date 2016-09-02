@@ -19,8 +19,12 @@ mixin postCover(item, flag)
 
 =======
     - var coverUrl = item.cover ? item.path + item.cover : url_for(theme.postCover)
+<<<<<<< HEAD
     .post-cover(itemprop='cover' style= 'background: url(#{coverUrl})')
 >>>>>>> c6be0ce... Handle gulp error
+=======
+    .post-cover(itemprop='cover' style= 'background-image: url(#{coverUrl})')
+>>>>>>> a7dccb4... Fix home page && archive page layout
     a(href= url_for(item.path) itemprop='url')
       h3.post-name(itemprop='name')
         != item.title
@@ -29,7 +33,11 @@ mixin postCover(item, flag)
 
 //- Index Page
 mixin home()
+<<<<<<< HEAD
     .container.home
+=======
+    .home
+>>>>>>> a7dccb4... Fix home page && archive page layout
         .entry-header
             h1.entry-title
                 != config.title
@@ -37,6 +45,7 @@ mixin home()
                 != config.description
         .entry-list
             - page.posts.each(function (item) {
+<<<<<<< HEAD
                 +postCover(item, true)
             - })
 
@@ -51,6 +60,14 @@ mixin archive()
 mixin postList()
   .archive-list
     .container
+=======
+                +postCover(item)
+            - })
+
+//- Archive Page
+mixin archive()
+    .archive
+>>>>>>> a7dccb4... Fix home page && archive page layout
         - var year = 0
         - var change = false
 >>>>>>> c6be0ce... Handle gulp error
@@ -61,16 +78,21 @@ mixin postList()
             if change
                 .entry-header
 <<<<<<< HEAD
+<<<<<<< HEAD
                     h2.entry-title
 =======
                     h1.entry-title
 >>>>>>> c6be0ce... Handle gulp error
+=======
+                    h2.entry-title
+>>>>>>> a7dccb4... Fix home page && archive page layout
                         != year
             +postCover(item)
         - })
 
 //- Post Page
 mixin post(item)
+<<<<<<< HEAD
     .post
         article.hentry(itemscope itemtype='http://schema.org/Article')
             if item.cover
@@ -92,3 +114,22 @@ mixin post(item)
                                 a.tag(href=url_for(tag.path))
                                     != tag.name
                             - })
+=======
+  .post
+    article.hentry(itemscope itemtype='http://schema.org/Article')
+      .entry-header
+          h1.entry-title
+            != item.title
+          .entry-description
+            != item.excerpt
+          +postInfo(item)
+      .entry-content(itemprop='articleBody')
+        != item.more
+      .entry-extra
+        .entry-tags
+          if item.tags && item.tags.length
+            - item.tags.each(function(tag){
+              a.tag(href=url_for(tag.path))
+                != tag.name
+            - })
+>>>>>>> a7dccb4... Fix home page && archive page layout

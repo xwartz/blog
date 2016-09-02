@@ -5,14 +5,25 @@
 @import "_partial/base";
 @import "_partial/font";
 @import "_partial/header";
+<<<<<<< HEAD
+=======
+@import "_partial/post";
+@import "_partial/page";
+@import "_partial/photo";
+>>>>>>> a7dccb4... Fix home page && archive page layout
 @import "_partial/paginator";
 @import "_partial/footer";
 @import "_partial/hlight";
 @import "_partial/mq";
 @import "_partial/print";
+<<<<<<< HEAD
 @import "pupa";
 @import "home";
 @import "archive";
 @import "post";
 @import "page";
 @import "photo";
+=======
+@import "home";
+@import "archive";
+>>>>>>> a7dccb4... Fix home page && archive page layout

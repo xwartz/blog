@@ -1,17 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 $base-bg: #fafafa;
 $base-link-color: #434344;
 =======
 >>>>>>> c6be0ce... Handle gulp error
+=======
+$base-bg: #fafafa;
+$base-link-color: #434344;
+>>>>>>> a7dccb4... Fix home page && archive page layout
 
 html, body {
     padding: 0;
     margin: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 16px;
 =======
     font-size: 18px;
 >>>>>>> c6be0ce... Handle gulp error
+=======
+    font-size: 16px;
+>>>>>>> a7dccb4... Fix home page && archive page layout
 }
 
 body {
@@ -19,6 +28,7 @@ body {
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
+<<<<<<< HEAD
 <<<<<<< HEAD
     color: $black;
     line-height: 1.75;
@@ -106,17 +116,74 @@ main {
 * {
     box-sizing: border-box;
 =======
+=======
+    color: $black;
+    line-height: 1.5;
+    background-color: $base-bg;
+>>>>>>> a7dccb4... Fix home page && archive page layout
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga" on;
-    color: rgba(0,0,0,.8);
-    line-height: 1.5;
 }
 
-::selection {
-    background-color: #222;
-    color: #f9f9f9;
+a {
+    color: $base-link-color;
+    transition: all 0.25s ease-in;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+        text-decoration: none;
+    }
+}
+
+figcaption > span {
+    display: block;
+    padding: 5px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin: 1.3rem 0;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin: 0.8rem 0 1rem;
+}
+
+h5, h6 {
+    font-size: 1.1rem;
+}
+
+h6 {
+    font-weight: 500;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header, footer {
+    flex: none;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .hide {
@@ -125,35 +192,30 @@ main {
 
 .container {
     max-width: 960px;
-    box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
     margin: 0 auto;
     zoom: 1;
+
+    &:after {
+        display: table;
+        content: "";
+        clear: both;
+    }
 }
 
-.container:after {
-    display: table;
-    content: "";
-    clear: both;
+* {
+    box-sizing: border-box;
 }
 
-a {
-    color: #434344;
-    transition: all 0.25s ease-in;
-}
-
-a:hover {
-    opacity: 0.8;
-}
-
-figcaption > span {
-    display: block;
-    padding: 5px;
-}
-
+<<<<<<< HEAD
 .logo {
     width: 24px;
     height: 24px;
 >>>>>>> c6be0ce... Handle gulp error
+=======
+::selection {
+    background-color: #222;
+    color: #f9f9f9;
+>>>>>>> a7dccb4... Fix home page && archive page layout
 }
