@@ -1,8 +1,4 @@
 header {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7dccb4... Fix home page && archive page layout
     position: relative;
     border-bottom: 1px solid #ddd;
     background-color: #fff;
@@ -10,41 +6,6 @@ header {
     a {
         color: #aaa;
     }
-<<<<<<< HEAD
-=======
-    padding: 20rem/$size 0;
-    border-bottom: 1px solid #f9f9f9;
-
-  .container {
-    max-width: 1010px;
-  }
-
-  a {
-    color: #444;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-
-  a:hover {
-    opacity: 1;
-    color: #222;;
-  }
-
-}
-
-.brand {
-  float: left;
-  cursor: pointer;
-  height: 24px;
-
-  &:hover {
-    opacity: .8;
-  }
-
-}
->>>>>>> c6be0ce... Handle gulp error
-=======
->>>>>>> a7dccb4... Fix home page && archive page layout
 
     .container {
         height: 78px;
@@ -53,10 +14,6 @@ header {
         align-items: center;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7dccb4... Fix home page && archive page layout
     .logo {
         display: block;
 
@@ -76,13 +33,5 @@ header {
             margin-left: 2rem;
         }
     }
-<<<<<<< HEAD
-=======
-  a {
-    margin-right: 30rem/$size;
-  }
->>>>>>> c6be0ce... Handle gulp error
-=======
->>>>>>> a7dccb4... Fix home page && archive page layout
 
 }

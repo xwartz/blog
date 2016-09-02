@@ -2,45 +2,15 @@
 mixin page(item)
     .post.page
         article.hentry(itemscope itemtype='http://schema.org/Article')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a0b1d6f... A new style
             if item.image
                 .entry-cover(itemprop='image' style= 'background-image: url(#{item.image})')
 
             .container
                 .entry-header
-<<<<<<< HEAD
-=======
-            .entry-header
-<<<<<<< HEAD
-                .container
->>>>>>> c6be0ce... Handle gulp error
-=======
->>>>>>> a0b1d6f... A new style
                     h1.entry-title
                         != item.title
                     .entry-description
                         != item.excerpt
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 .entry-content(itemprop='articleBody')
                     != item.more
-=======
-            .entry-content.container(itemprop='articleBody')
-=======
-                h1.entry-title
-                    != item.title
-                .entry-description
-                    != item.excerpt
-            .entry-content(itemprop='articleBody')
->>>>>>> a7dccb4... Fix home page && archive page layout
-                != item.more
->>>>>>> c6be0ce... Handle gulp error
-=======
-
-                .entry-content(itemprop='articleBody')
-                    != item.more
->>>>>>> a0b1d6f... A new style

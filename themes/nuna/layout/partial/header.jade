@@ -1,32 +1,13 @@
 header
     .container
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7dccb4... Fix home page && archive page layout
         a.logo(href=url_for())
             img(src=url_for(theme.logo))
 
         span(class='span-holder')
 
-<<<<<<< HEAD
-=======
-        a.brand(href=url_for())
-            img.logo(src=url_for(theme.logo))
->>>>>>> c6be0ce... Handle gulp error
-=======
->>>>>>> a7dccb4... Fix home page && archive page layout
         nav
             each value, key in theme.menu
                 - var re = /^(http|https):\/\/*/gi;
                 - var tar = re.test(value) ? '_blank' : '_self'
-<<<<<<< HEAD
-<<<<<<< HEAD
                 a(href=url_for(value) target=tar)
-=======
-                a(class={active: is_current(url_for(value))} href=url_for(value) target=tar)
->>>>>>> c6be0ce... Handle gulp error
-=======
-                a(href=url_for(value) target=tar)
->>>>>>> a7dccb4... Fix home page && archive page layout
                     i(class='fa icon-#{key}')

@@ -36,8 +36,6 @@
             }
 
             > a {
-<<<<<<< HEAD
-<<<<<<< HEAD
                 opacity: 1;
             }
         }
@@ -47,50 +45,17 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-=======
-                height: 100%;
-=======
-                opacity: 1;
->>>>>>> a0b1d6f... A new style
-            }
-        }
-
-        .post-thumb {
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-<<<<<<< HEAD
->>>>>>> a7dccb4... Fix home page && archive page layout
-=======
-            background-position: center;
->>>>>>> a0b1d6f... A new style
             background-repeat: no-repeat;
         }
 
         > a {
-<<<<<<< HEAD
-<<<<<<< HEAD
             opacity: 0;
-=======
->>>>>>> a7dccb4... Fix home page && archive page layout
-=======
-            opacity: 0;
->>>>>>> a0b1d6f... A new style
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
             height: 100%;
             padding: 0.5rem;
-=======
-            height: 0%;
->>>>>>> a7dccb4... Fix home page && archive page layout
-=======
-            height: 100%;
-            padding: 0.5rem;
->>>>>>> a0b1d6f... A new style
             overflow: hidden;
             color: #fff;
             background-color: rgba(0, 0, 0, 0.4);
@@ -116,15 +81,7 @@
 .paginator {
     margin-top: 4rem;
     display: flex;
-<<<<<<< HEAD
-<<<<<<< HEAD
     justify-content: space-around;
-=======
-    justify-content: center;
->>>>>>> a7dccb4... Fix home page && archive page layout
-=======
-    justify-content: space-around;
->>>>>>> a0b1d6f... A new style
     align-items: center;
 }
 
