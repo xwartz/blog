@@ -1,7 +1,7 @@
 ---
 title: 关于博客
 date: 2016-06-13 20:16:34
-cover: illu.png
+cover: http://ww3.sinaimg.cn/large/65e4f1e6gw1f7gb87gobnj211y0lctcp.jpg
 tags:
  - blog
 ---

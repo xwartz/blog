@@ -1,6 +1,7 @@
 ---
 title: 前端工程化之IDE搭建
 date: 2016-05-01 18:06:39
+cover: http://ww3.sinaimg.cn/large/65e4f1e6gw1f7gb97vyg6j21kw0zktq4.jpg
 tags: 前端工程
 ---
 
@@ -45,7 +46,7 @@ tags: 前端工程
 `VSCode` 也是刚出来就马上用了下，和 `Atom` 一个毛病，就是用 `Electron` 编写的，性能上不行，打开大文件的时候会卡一会，曾经经常挂掉，
 `WebStorm` 试用过一段时间，还是非常不错的，就是丑了些，还有费用需要年费... 所以到现在一直使用的就是 `Sublime` 了。
 
-![WebStorm Features](./webstorm.png)
+![WebStorm Features](http://ww4.sinaimg.cn/large/65e4f1e6gw1f7gbqwaqnvj21kw0tudnf.jpg)
 
 但是要说的上是IDE的话，感觉只有 [WebStorm](https://www.jetbrains.com/webstorm/) 算得上了，[VSCode](http://code.visualstudio.com/) 也还不错了，但是功能并没有那么强大。
 
@@ -134,7 +135,7 @@ trim_trailing_whitespace = false
 
 每次开始一个项目的时候，需要 `eslint --init`，然后选择 `Standard`，再安装一些依赖模块就 OK 了。
 
-![sublime lint](./sublime.png)
+![sublime lint](http://ww2.sinaimg.cn/large/65e4f1e6gw1f7gbqvj7hcj21kw0zkdm8.jpg)
 
 还可以在 `github` 项目中很方便的加上它的 Logo 
 

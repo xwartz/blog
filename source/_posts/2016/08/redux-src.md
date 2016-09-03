@@ -1,7 +1,7 @@
 ---
 title: Redux 解析
 date: 2016-08-09 15:29:18
-cover: cover.png
+cover: http://ww4.sinaimg.cn/large/65e4f1e6gw1f7gbsydr0ej21hc0dc42o.jpg
 tags:
   - code
 ---

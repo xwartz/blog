@@ -18,9 +18,9 @@ before_script:
   - git config --global user.name "xwartz"
   - git config --global user.email "stddup@gmail.com"
   # 确保主题是最新的
-  - rm -rf themes/pupa
+  - rm -rf themes/nuna
   # clone 博客主题
-  - git clone https://${GH_Token}@${GH_THEME} themes/pupa
+  - git clone https://${GH_Token}@${GH_THEME} themes/nuna
 
 script:
   # 生成静态文件

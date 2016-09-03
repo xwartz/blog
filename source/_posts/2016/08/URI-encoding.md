@@ -1,6 +1,7 @@
 ---
 title: URL 编码
 date: 2016-08-20 17:59:04
+cover: http://ww1.sinaimg.cn/large/65e4f1e6gw1f7gbtgqg7dj20xc0kuq7p.jpg
 tags: 
   - code
 ---
@@ -27,7 +28,7 @@ tags:
 > 此时，会将前者的 `userId` 通过 `rsa` 加密之后拼接到 `URL` 中，
 > 后者获取 `userId` 之后会与后端做些交互。
 
-首先，简单将 `URL` 表示为 `http://127.0.0.1:8043/wallet/withdraw?userId=Exft+f4`，
+首先，简单将 `URL` 表示为 "http://127.0.0.1:8043/wallet/withdraw?userId=Exft+f4"，
 那么要获取的 `userId` 就是 `Exft+f4`。
 
 在测试的时候，发现有些账号没有问题，有些账号出现问题，感觉是一个偶然性的问题，然后继续追踪。
@@ -66,12 +67,13 @@ tags:
 
 `encodeURI` 不会转义以下字符
 
-1.保留字符: `; , / ? : @ & = + $`
-2.非转义的字符: `字母 数字 - _ . ! ~ * ' ( )`
-3.数字符号 `#`
+> 1.保留字符: `; , / ? : @ & = + $`
+  2.非转义的字符: `字母 数字 - _ . ! ~ * ' ( )`
+  3.数字符号 `#`
 
 `encodeURIComponent` 不会转义以下字符
-1.非转义的字符: `字母 数字 - _ . ! ~ * ' ( )`
+
+> 1.非转义的字符: `字母 数字 - _ . ! ~ * ' ( )`
 
 以上，`encodeURI` 无法产生能适用于 `HTTP` `GET` 请求的 `URI`。
 
@@ -79,7 +81,7 @@ tags:
 
 所以为了避免服务器收到不可预知的请求，应该使用 `encodeURIComponent` 进行转义。
 
-因此，上面的 `http://127.0.0.1:8043/wallet/withdraw?userId=Exft+f4`，不能简单使用 `encodeURI` 方法来转义。
+因此，上面的 "http://127.0.0.1:8043/wallet/withdraw?userId=Exft+f4"，不能简单使用 `encodeURI` 方法来转义。
 
 而是应该将 `userId` 单独使用 `encodeURIComponent` 进行转义后拼接。
 
@@ -104,7 +106,7 @@ tags:
 
 所以往后需要注意的是对于任何不可控的字符作为 `URL` 部分的内容都需要用 `encodeURIComponent` 进行转义。
 
-目前工作中遇到常见的场景是手动拼接 `URL` ，比如活动页面的回跳，但是一般也不会出现特殊字符、中文等情况。
+目前工作中遇到常见的场景是手动拼接 `URL`，比如活动页面的回跳，但是一般也不会出现特殊字符、中文等情况。
 
 还有一个常见的应该就是搜索了吧，需要使用用户输入的关键字作为 `keywords`，然而用户输入的字符不可控制，因此必然需要转义。
 
