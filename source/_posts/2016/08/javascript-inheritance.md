@@ -1,7 +1,7 @@
 ---
 title: JavaScript 继承
 date: 2016-08-04 09:30:20
-cover: http://ww4.sinaimg.cn/large/65e4f1e6gw1f7gbs4gkoqj21jk0hsgve.jpg
+cover: http://ww1.sinaimg.cn/large/65e4f1e6gw1f7ipx660akj21hc0xcn0m.jpg
 tags:
 - code
 ---

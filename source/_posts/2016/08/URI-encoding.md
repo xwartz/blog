@@ -1,7 +1,7 @@
 ---
 title: URL 编码
 date: 2016-08-20 17:59:04
-cover: http://ww1.sinaimg.cn/large/65e4f1e6gw1f7gbtgqg7dj20xc0kuq7p.jpg
+cover: http://ww4.sinaimg.cn/large/65e4f1e6gw1f7ipb9exhwj21kw0y8wg7.jpg
 tags: 
   - code
 ---

@@ -3,7 +3,7 @@ title: About Me
 date: 2016-08-28 23:16:27
 comments: false
 layout: page
-cover: http://ww4.sinaimg.cn/large/65e4f1e6gw1f7gctsc6bej21kw0w1q9l.jpg
+cover: http://ww3.sinaimg.cn/large/65e4f1e6gw1f7ips01zg3j21kw0zkjry.jpg
 ---
 
 Developer, Web Designer.
