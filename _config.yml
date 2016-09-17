@@ -72,6 +72,9 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: nuna
 
+# Copyright Infomation
+startYear: 2015
+
 # 在归档页面显示所有文章
 # 需要上面安装的 hexo-generator-archive 插件支持
 archive_generator:
