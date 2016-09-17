@@ -175,10 +175,13 @@ Nginx 了解的并不是很多，就不展开讨论了，还望人指点。
 
 以上，准备自己撸一个 [Lula](https://github.com/xwartz/lula) 玩玩。
 
+另外也可以关注下，下面列出的链接。
+
 ### 参考
 
-[React 同构实践与思考](https://zhuanlan.zhihu.com/p/20669111?refer=purerender)
+[用于生成API的文档的方案总结](https://cnodejs.org/topic/567d612c435249f221f53a89)
 [你是如何构建 Web 前端 Mock Server 的](https://www.zhihu.com/question/35436669)
+[React 同构实践与思考](https://zhuanlan.zhihu.com/p/20669111?refer=purerender)
 [json-server](https://github.com/typicode/json-server)
 [apiary](https://apiary.io/)
 [RAP](https://github.com/thx/RAP)
