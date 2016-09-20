@@ -17,7 +17,7 @@ tags:
 
 ----
 
-写过前端单元测试的朋友，应该都知道 PhantomJS，我之前也写过几篇测试相关的，也有用到(http://xwartz.github.io/pupa/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/)。
+写过前端单元测试的朋友，应该都知道 PhantomJS，我之前也写过几篇[单元测试](http://xwartz.github.io/pupa/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/)相关的，也有用到。
 
 > PhantomJS 是一个基于 WebKit 的服务器端 JavaScript API, 无需浏览器的支持即可实现对 Web 的支持，
 > 且原生支持各种 Web 标准，如 DOM 处理、JavaScript、CSS 选择器、JSON、Canvas 和可缩放矢量图形 SVG。
@@ -169,7 +169,7 @@ var start = function() {
 
 ```
 
-#### 在这过程中，遇到几个可以记一下的东西：
+#### 在这过程中，遇到几个可以记一下的东西： 
 
 1. exit 方法是一个异步的过程。
 2. start/open 方法打开新的页面，类似于浏览器打开新的 tab。
@@ -181,7 +181,8 @@ var start = function() {
 
 #### 疑惑：
 
-1. 监听 exit 事件，打开多个页面，最后会触发多次
+1. 监听 `exit` 事件，打开多个页面，最后会触发多次
+2. `waitFor` 设置 `timeout` 无效，貌似只能在 `create` 的时候设置 `stepTimeout`。
 
 #### 缺点
 
@@ -194,14 +195,16 @@ var start = function() {
 1. 使用 npm 安装 phantomjs-prebuilt，替代全局安装 phantomjs
 2. 不推荐使用 phantomjs-node
 3. 推荐 [faker.js](https://github.com/marak/Faker.js/) 创建模拟数据
-4. [random-js](https://github.com/ckknight/random-js) 创建随机数据
-5. 用 Python 的朋友可以看下这个 [mechanize](http://docs.seattlerb.org/mechanize/)，类似 PhantomJS 的 Python 实现
+4. 推荐[random-js](https://github.com/ckknight/random-js) 创建随机数据
+5. 上传图片接口 [upload-file](http://phantomjs.org/api/webpage/method/upload-file)
 
 暂时就这些。
 
 ### 结论
 
 使用 CasperJS/PhantomJS 可以做很多自动化的事，值得尝试，不怕被辞...
+
+最后，用 Python 的朋友可以看下这个 [mechanize](http://docs.seattlerb.org/mechanize/)，类似 PhantomJS 的 Python 实现。
 
 ### 资源
 
