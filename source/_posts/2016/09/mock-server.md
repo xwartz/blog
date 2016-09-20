@@ -1,10 +1,12 @@
 ---
 title: 前端如何 Mock 数据
+date: 2016-09-16 23:02:10
 thumb: http://ww3.sinaimg.cn/large/7853084cgw1f7vttm4rr9j20dm0amt9i.jpg
 cover: http://ww3.sinaimg.cn/large/7853084cgw1f7vueqesr5j21jk0uh446.jpg
 tags:
   - code
-date: 2016-09-16 23:02:10
+  - mock
+  - proxy
 ---
 
 前端在开发的阶段，往往依赖后端的接口，应该如何减少甚至摆脱这种依赖呢。
