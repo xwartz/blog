@@ -20,7 +20,8 @@ before_script:
   # 确保主题是最新的
   - rm -rf themes/nuna
   # clone 博客主题
-  - git clone https://${GH_Token}@${GH_THEME} themes/nuna
+  # - git clone https://${GH_Token}@${GH_THEME} themes/nuna
+  - git clone https://${GH_Token}@${GH_THEME} --branch dev --single-branch themes/nuna
 
 script:
   # 生成静态文件

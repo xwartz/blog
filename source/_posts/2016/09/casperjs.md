@@ -182,8 +182,8 @@ var start = function() {
 #### 疑惑：
 
 1. 监听 `exit` 事件，打开多个页面，最后会触发多次
-2. `waitFor` 设置 `timeout` 无效，貌似只能在 `create` 的时候设置 `stepTimeout`。
-3. 数据大的时候，会出现这个错误 [Maximum step execution timeout exceeded for step](https://github.com/casperjs/casperjs/issues/1689)
+2. `waitFor` 设置 `timeout` 无效，貌似只能在 `create` 的时候设置 `stepTimeout`，或者说是要比 `stepTimeout` 值要小？
+3. 操作步骤多的时候，会经常出现这个错误 [Maximum step execution timeout exceeded for step](https://github.com/casperjs/casperjs/issues/1689)
 
 #### 缺点
 
