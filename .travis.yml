@@ -1,51 +1,34 @@
 sudo: false
 language: node_js
 node_js:
-  - "node"
-
+  - node
 cache:
   directories:
     - node_modules
-
 branches:
   only:
     - master
-
 install:
   - npm install
-
 before_script:
   - git config --global user.name "xwartz"
   - git config --global user.email "stddup@gmail.com"
-  # 确保主题是最新的
   - rm -rf themes/nuna
-  # clone 博客主题
-  # - git clone https://${GH_Token}@${GH_THEME} themes/nuna
   - git clone https://${GH_Token}@${GH_THEME} --branch dev --single-branch themes/nuna
-
 script:
-  # 生成静态文件
   - npm run build
-
 after_script:
-  # 将生成的静态文件，初始化为 git 仓库
   - cd public
   - git init
   - git config user.name "xwartz"
   - git config user.email "stddup@gmail.com"
   - git add --all
   - git commit -m "Update blog"
-  # 推送到 gh-pages 分支
   - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:gh-pages
-
 os:
-  - osx
-
+- osx
 env:
   global:
-    # 博客主题仓库
     - GH_THEME: github.com/xwartz/hexo-theme-nuna.git
-    # 博客仓库
     - GH_REF: github.com/xwartz/blog.git
-    # 加密的 token
-    - secure: "qHeJD7Vuu0zqOSOKd1p5KHcGW7IF8IjaljK9MO9loSBiDhmN3cYSZlK0km1atyX0oENOrFPRZygxIep9TRcLmKrO0plvy2RbOtfbV9//Vb061qTyMMO9FKkJ7eMAWL4EmBcSI3K3I+kCIk44FxLjkynxhejnH/Jqo/6F/d1uS96ntLRWgJNOARMZke5Ke5LRO8mowZd8fSjZ5ssOBBvEbrt31QTEoPWd9NCz5ZQJ9FELK7EnIYhn1dqzqFkKSkrj/ZwFI7uKqnYss6oFN82ZA1YJ68O8EjnhX6jbLEbwNXcya9W7fXR4LkIGwS4gd4G4tXFOmbMSWD/JOy++etyEWPe/aEjxuThFIMgxoN+3DGIjRpMvV+PzSU+5CfWwv6q2Qmq5FjMbcrb95E1btmf4uNAA5tWaZ04K1xyGWHOFvrXy8HMzSuxD4FONtdv8xhoSzZsgXrSjwqVvQnQwVzESyri9MQNRZiEm8iyvN8UCvNE4ZkC9r+nxoqvUKDn1u3b8t5Wi7oamGi2ZvfK5xmNhRQjntckbHxf/HuJnNl0dEFE1rJK1cZK6w/gOq8orzVXpd4DUgG1O4vuNCIv5nDDy/JRpfe9pdlD1v/i/vX1UreYDSuW2zP6YHmFBwGSZbeM2HkvyD4XLy0PI5ZbnNn5T+iCWU4XWQe1PtPOtNfeZCW4="
+    - secure: vZ3pByss7Nw73dGv2vmbG59YVj3LCZqSJZJ0PKdACFX+Q2blRB2Ql+Y4TyA6eXaVZ0YMUHFQVntV4QJgXMaK6TfnccmKJ0RgxANrAkM0IPaM2+ozn0EeTjwfGv1xt0/Zxxqnp1HWzNxIsqI6YKX4fiXrXGxMNYwEVKFcuKsdSpYWTN7Kljdyf8WptknNBGzqQQf1sqETmsBtHsg0MmYP6cLn/h20OeHVvAljvCyxuMZckZgYmxHu7xCrXikw/oVyW1/EOtH1u2njskfK2oOOV1r7rFU0386IdglMHJ2Q6dKuc8RQRbhKcicsekO2PasaWRrjJaNPNiuJPEqCxf36N9p25B0FnNyPHoihyd2hU7Y5brqApOOMoHuow/Sgl85VaZslU0VpwceRrPk/Ma4IB8MUlimTMkjYEHfhwyIdiiBn3MtW8BuE6Zz9qd2I94XKs6b7kdO5iOHOdb8nvO2k2q+MHdSPUMVZ6AdrHeR25uHj7CQiesovbPFkDuYfZAMM1iYyHzW9SO1hSpMOZb6SN/MB8vRkGiOUzgUUIawGecPlWHHDijP2zAAdywFJyUWVNjDoXAA7eWf7U/y2j5G72lj4SuszTv7S8fwePLz8r7YN0rs6JDl4KcQhAko+WFMhPPuH4VJ8RrQ4Xlp4fb8sRAuZuWVbHsnm/vpORANb13k=
