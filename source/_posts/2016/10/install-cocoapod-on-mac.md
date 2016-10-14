@@ -88,3 +88,4 @@ sudo gem install cocoapods
 
 [用CocoaPods做iOS程序的依赖管理](http://blog.devtang.com/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/)
 [关于安装cocoapods遇到的一些坑（ERROR: Error installing cocoapods: activesupport requires Ruby version >= 2.2）](http://blog.csdn.net/fairytale_1/article/details/51850734)
+[iOS CocoaPods 安装笔记](http://www.jianshu.com/p/32d9cfb91471)
