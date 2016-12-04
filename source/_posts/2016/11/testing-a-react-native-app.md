@@ -6,7 +6,7 @@ date: 2016-11-18 20:58:41
 tags:
   - code
   - react-native
-  - test
+  - testing
 ---
 
 这会是一系列的文章，来介绍如何为 React Native App 写测试(包括 Unit Testing 和 Functional Testing)以及遇到的一些坑。
@@ -15,7 +15,7 @@ tags:
 
 使用 React Native 开发有一些日子了，最近在补一些单元测试，赶产品留下的技术债...
 
-这是 <为 React Native 应用写测试> 的系列文章的第一篇，希望能保持更新吧。
+这是 [<为 React Native 应用写测试>](/blog/tags/react-native) 的系列文章的第一篇，希望能保持更新吧。
 
 这篇主要会集中在 `Action` 和 `Reducer` 层的单元测试编写。
 
@@ -169,7 +169,7 @@ export default initStore(reducers({}, { type: '__mocks__' }))
 
 #### Reducers
 
-将 `Action`·和 `Reducer` 分开之后写单元测试，`Reducer` 的测试就比较简单了，直接按照[官方例子](https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md#reducers)来写就 OK 了。
+将 `Action` 和 `Reducer` 独立出来写单元测试之后，`Reducer` 的测试就变得很简单了，直接按照[官方例子](https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md#reducers)来写就 OK 了。
 
 ### 参考
 
