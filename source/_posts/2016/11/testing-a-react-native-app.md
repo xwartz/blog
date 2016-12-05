@@ -13,7 +13,7 @@ tags:
 
 <!-- more -->
 
-使用 React Native 开发有一些日子了，最近在补一些单元测试，赶产品留下的技术债...
+使用 React Native 开发有一些日子了，最近在补一些单元测试，赶发布留下的技术债...
 
 这是 [<为 React Native 应用写测试>](/blog/tags/react-native) 的系列文章的第一篇，希望能保持更新吧。
 
@@ -27,7 +27,7 @@ tags:
 
 基本的配置看[官方文档](https://facebook.github.io/jest/docs/tutorial-react-native)即可。
 
-这里有点需要注意的地方，就是当你在代码中使用了 `@providesModule` 在 `package.json` 文件中需要以下配置:
+这里有点需要注意的地方，如果你在代码中使用了 `@providesModule`, 那么在 `package.json` 文件中需要以下配置:
 
 ```json
 "jest": {
@@ -72,7 +72,7 @@ jest.mock('jpush-react-native', () => ({
 
 总的来说，mock 其实也还算挺方便的，具体可以参考[文档](https://facebook.github.io/jest/docs/tutorial-react-native#mock-native-modules-using-jestmock)。
 
-此外，涉及到网络请求的也需要 mock 一下，这里推荐 [nock](https://github.com/node-nock/nock)，后面会讲如何使用，以及一些坑。
+此外，涉及到网络请求的也需要 mock 一下，这里推荐 [nock](https://github.com/node-nock/nock)。
 
 ### Redux
 
@@ -113,7 +113,7 @@ describe('actions', () => {
 
 异步 action 通常会使用 [redux-thunk](https://github.com/gaearon/redux-thunk) 或者其他一些 `middleware`，所以需要 mock 一下 store，推荐 [redux-mock-store](https://github.com/arnaudbenard/redux-mock-store)。
 
-另外，对于网络请求，你需要 mock server 或者使用 [nock](https://github.com/node-nock/nock) 来 mock 。
+另外，对于网络请求，你可能需要使用 [nock](https://github.com/node-nock/nock) 来 mock 各种网络状态。
 
 除此之外，在 RN 中，`fetch` 使用的是 [whatwg-fetch](https://github.com/github/fetch)，并且 `XMLHttpRequest` 是在[底层](https://github.com/facebook/react-native/blob/master/Libraries/Network/XMLHttpRequest.js) 自己封装的。
 
@@ -143,9 +143,9 @@ import xmlhttprequest from 'xmlhttprequest'
 jest.mock('XMLHttpRequest', () => xmlhttprequest.XMLHttpRequest)
 ```
 
-注意：这里使用 `jest.mock` 是因为在 RN [XMLHttpRequest.js](https://github.com/facebook/react-native/blob/master/Libraries/Network/XMLHttpRequest.js#L9) 中，注册了 `@providesModule XMLHttpRequest`，然后各种 `import XMLHttpRequest from XMLHttpRequest` 引入使用，而 fetch 是当做全局对象使用的。
+注意：这里使用 `jest.mock` 是因为在 RN [XMLHttpRequest.js](https://github.com/facebook/react-native/blob/master/Libraries/Network/XMLHttpRequest.js#L9) 中注册了 `@providesModule XMLHttpRequest`，然后各种 `import XMLHttpRequest from XMLHttpRequest` 引入使用，而 fetch 是当做全局变量使用的。
 
-所以 `store` 可能是这样子的：
+所以 `mock store` 可能是这样子的：
 
 `redux-mock-store.js`
 
@@ -170,6 +170,7 @@ export default initStore(reducers({}, { type: '__mocks__' }))
 #### Reducers
 
 将 `Action` 和 `Reducer` 独立出来写单元测试之后，`Reducer` 的测试就变得很简单了，直接按照[官方例子](https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md#reducers)来写就 OK 了。
+
 
 ### 参考
 
