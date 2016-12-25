@@ -29,7 +29,8 @@
     "hexo-renderer-marked": "^0.2.11",
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.2.0",
-    "hexo-wordcount": "^1.2.0"
+    "hexo-wordcount": "^1.2.3",
+    "pm2": "^1.1.3"
   },
   "devDependencies": {
     "pm2": "^1.1.3"
