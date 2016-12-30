@@ -9,7 +9,7 @@ tags:
   - testing
 ---
 
-这会是一系列的文章，来介绍如何为 React Native App 写测试(包括 Unit Testing 和 Functional Testing)以及遇到的一些坑。
+Component 测试
 
 <!-- more -->
 
@@ -19,6 +19,8 @@ tags:
 
 注意：*以下涉及到的 React Native 版本为 0.36，官方版本推进很快，最新可能出现偏差。*
 
+
+待...
 
 ### 参考
 
