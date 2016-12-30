@@ -280,7 +280,12 @@ map4.setIn(['a', 'b'], 'e') // { a: { b: 'e' } }
 
 #### merge
 
-`merge()`、`mergeWith()`、 `mergeDeep()`、`mergeDeepWith()` 与 `List` 类似
+`merge()`、`mergeWith()`、 `mergeDeep()`、`mergeDeepWith()` 与 `List` 类似。
+
+## 更多
+
+`Immutable.js` 文档中提供的方法还有很多，可以自己查看。更复杂的操作推荐这篇文章 [Advanced Immutable.js Recipes: How to use Immutable.js in the real world](http://untangled.io/advanced-immutable-js-recipes-how-to-use-immutable-js-in-the-real-world/)。
+
 
 ## 参考
 
