@@ -12,9 +12,9 @@ Immutable.js 使用笔记。
 
 <!-- more -->
 
-所以涉及到的方法都可以在[官方文档](https://facebook.github.io/immutable-js/docs)查到，只是官方文档晦涩难懂。
+所有涉及到的方法都可以在[官方文档](https://facebook.github.io/immutable-js/docs)查到，只是官方文档晦涩难懂。
 
-以下列子也可以自行打开 [官方文档](https://facebook.github.io/immutable-js/docs) 页面的 console，查看转化后的 JavaScript 原型，可以 `Immutable.toJS()` 或者查看 `_tail` 字段。
+查看转化后的 JavaScript 原型，打开 console 使用 `Immutable.toJS()` 或者查看 `_tail` 字段。
 
 
 ## List
@@ -284,7 +284,9 @@ map4.setIn(['a', 'b'], 'e') // { a: { b: 'e' } }
 
 ## 更多
 
-`Immutable.js` 文档中提供的方法还有很多，可以自己查看。更复杂的操作推荐这篇文章 [Advanced Immutable.js Recipes: How to use Immutable.js in the real world](http://untangled.io/advanced-immutable-js-recipes-how-to-use-immutable-js-in-the-real-world/)。
+`Immutable.js` 文档中提供的方法还有很多，可以自己查看。
+
+更复杂的操作，推荐阅读这篇文章 [Advanced Immutable.js Recipes: How to use Immutable.js in the real world](http://untangled.io/advanced-immutable-js-recipes-how-to-use-immutable-js-in-the-real-world/)。
 
 
 ## 参考

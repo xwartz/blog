@@ -2,7 +2,7 @@
 title: 为 React Native 应用写测试 II
 thumb: http://ww3.sinaimg.cn/large/006tNc79gw1faf7037q56j30uk0ukq4g.jpg
 cover: http://ww4.sinaimg.cn/large/006tNc79gw1faf5ob4bucj31gs0z7wgr.jpg
-date: 2016-11-18 20:58:41
+date: 2016-12-18 20:58:41
 tags:
   - code
   - react-native
