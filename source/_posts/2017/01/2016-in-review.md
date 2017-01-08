@@ -10,13 +10,15 @@ date: 2017-01-07 23:36:49
 
 #### 工作
 
-年初的时候，离开了第一家公司，当初实习时，上下班接近 3 小时还历历在目。
+年初的时候，离开了第一家公司，
 
-2 个月前离开第二家公司，现在我算是在互联网金融行业了吧。
+当初实习时，上下班接近 3 小时还历历在目。
 
-离开一个熟悉的环境，每次都有新的认知，还是很有趣的事。
+2 个月前离开第二家公司，还是要有点技术追求的。
 
-最有趣的是，
+离开一个熟悉的环境，每次都有新的认知。
+
+变化才能有更多可能性，有趣的是，
 
 在上家公司面基了在 github 上认识的人，
 
@@ -25,26 +27,6 @@ date: 2017-01-07 23:36:49
 如果我一直待在一个地方，就不会认识这么些人。
 
 Interesting.
-
-#### 出玩
-
-前公司福利，去了一趟大理。
-
-![大理](https://ww3.sinaimg.cn/large/006tNbRwgw1fbiivx13agj30yo0q0jvg.jpg)
-
-从工作以来，还是很少出去玩的，希望今年能有机会出去走走。
-
-#### 喵
-
-成为了一名铲屎官。
-
-![Hello world](https://ww3.sinaimg.cn/large/006tNbRwgw1fbiijlcmbgj315t15t0zb.jpg)
-
-卖卖萌，我很开心。
-
-从此有 🐱 陪我看电影 码代码，hahahaha...
-
-然而她只会捣乱，最后只有互相伤害。
 
 #### Github
 
@@ -65,14 +47,17 @@ Interesting.
 
 ![](https://ww2.sinaimg.cn/large/006tNbRwgw1fbijg97gorj30m80bit9a.jpg)
 
-入坑了 React Native，熟悉原生中，Android / iOS 有的搞。
+新公司入坑了 React Native，熟悉原生中，Android / iOS 有的搞。
 
+React Native 一年发布了 100 多个版本，社区的活跃，让它渐渐稳定。
+
+期待 v1.0.0 的到来。
 
 #### Testing
 
 更多的编写脚本自动干一些重复的活。
 
-花了更多时间写测试，搭建 Jenkins Ci，搞集成测试 。 
+花了更多时间写测试，Jest / Appium，搭建 Jenkins Ci。 
 
 写更多的 Shell / Make 脚本，我受够了渣渣网络下的 node_modules 。
 
@@ -88,7 +73,33 @@ Interesting.
 
 希望能静下心读点书。
 
+#### 出玩
+
+前公司福利，去了一趟大理。
+
+![大理](https://ww3.sinaimg.cn/large/006tNbRwgw1fbiivx13agj30yo0q0jvg.jpg)
+
+从工作以来，还是很少出去玩的，希望今年能有机会出去走走。
+
+#### 喵
+
+成为了一名铲屎官。
+
+![Hello world](https://ww3.sinaimg.cn/large/006tNbRwgw1fbiijlcmbgj315t15t0zb.jpg)
+
+卖卖萌，我很开心。
+
+从此有 🐱 陪我看电影 码代码，hahahaha...
+
+然而现实是，
+
+咬人、抓人、不让睡觉...
+
+她只会捣乱，最后只有互相伤害 😂。
+
 #### 2017
+
+希望
 
 不设限，有所获。
 
