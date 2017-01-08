@@ -8,13 +8,9 @@
   "scripts": {
     "deploy": "hexo generate --deploy",
     "build": "hexo generate",
-    "server": "hexo server",
-    "log": "pm2 logs",
-    "stop": "pm2 stop eco.json && pm2 delete eco.json",
-    "start": "pm2 start eco.json && npm run log",
-    "restart": "npm run stop && npm run start"
+    "server": "hexo server"
   },
-  "devDependencies": {
+  "dependencies": {
     "hexo": "^3.2.0",
     "hexo-browsersync": "^0.2.0",
     "hexo-deployer-git": "^0.2.0",
@@ -29,7 +25,6 @@
     "hexo-renderer-marked": "^0.2.11",
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.2.0",
-    "hexo-wordcount": "^2.0.0",
-    "pm2": "^2.2.3"
+    "hexo-wordcount": "1.2.3"
   }
 }
