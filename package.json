@@ -14,7 +14,7 @@
     "start": "pm2 start eco.json && npm run log",
     "restart": "npm run stop && npm run start"
   },
-  "dependencies": {
+  "devDependencies": {
     "hexo": "^3.2.0",
     "hexo-browsersync": "^0.2.0",
     "hexo-deployer-git": "^0.2.0",
@@ -29,10 +29,7 @@
     "hexo-renderer-marked": "^0.2.11",
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.2.0",
-    "hexo-wordcount": "^1.2.3",
-    "pm2": "^1.1.3"
-  },
-  "devDependencies": {
-    "pm2": "^1.1.3"
+    "hexo-wordcount": "^2.0.0",
+    "pm2": "^2.2.3"
   }
 }
