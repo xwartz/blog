@@ -22,6 +22,15 @@ Component 测试
 
 待...
 
+
+update: 2017-02-16, 23:54
+
+去年年底一段时间确实太忙了，导致最后都没有时间写 Component 的测试，所以这篇文章要夭折了。
+
+推荐去看 redux 的文档 [Writing Tests](https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md#components)，以及文末的参考链接。
+
+Happy Coding.
+
 ### 参考
 
 <https://facebook.github.io/jest/docs/tutorial-react-native>
