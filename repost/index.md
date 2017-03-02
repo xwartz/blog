@@ -31,3 +31,5 @@
 [Perfection Kills](http://perfectionkills.com/) --- kangax
 
 [whatwg](https://whatwg.org/)
+
+[hacks.mozilla.org](https://hacks.mozilla.org/)
