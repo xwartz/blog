@@ -4,19 +4,18 @@ thumb: https://ww3.sinaimg.cn/large/006tKfTcgy1fcz16vsqi2j30dw0dw0tm.jpg
 date: 2017-02-22 10:11:54
 tags:
   - code
-    react-native
-    debugging
+  - react-native
 ---
 
 使用 React Native 的一点调试经验
 
 <!-- more -->
 
-React Native 无疑给移动端开发带来效率的提升，我们目前的产品中，iOS 和 Android 代码复用率应该在 80~90%。
+React Native 无疑给移动端开发带来效率的提升，我们目前的产品中，iOS 和 Android 代码复用率应该在 80~90%(保守估计)。
 
 虽然 React Native 提升了开发效率，但在 debug 时还是有很多不爽的地方。
 
-一些基础的调试方法可以查看官方文档，[Debugging](https://facebook.github.io/react-native/docs/debugging.html)。
+一些基础的调试方法可以查看官方文档 [Debugging](https://facebook.github.io/react-native/docs/debugging.html)。
 
 [Hot Reloading](https://facebook.github.io/react-native/blog/2016/03/24/introducing-hot-reloading.html) 应该是我目前最喜欢 RN 的一个地方了吧，和 web 一致的开发体验。
 
@@ -26,9 +25,13 @@ React Native 无疑给移动端开发带来效率的提升，我们目前的产�
 
 但是 `console.log` 会使整个程序变卡顿，尤其在 Android 下，界面卡顿无比，所以不建议打印所有信息。
 
+因此，以下的一些方法主要在于怎么减少在 console 打印信息，而又能方便的调试。
+
 ### 使用 window.store
 
 `console.log` 会极大地拖累 JavaScript 线程，所以并不推荐使用 `redux-logger`。
+
+要获取 store 的信息，可以用如下方式：
 
 ```js
 if (isDebuggingInChrome) {
@@ -36,12 +39,12 @@ if (isDebuggingInChrome) {
 }
 ```
 
-通过 `store.getState()` 的方式打印查看 reducer 的状态。
+通过 `store.getState()` 的方式打印查看 `reducer` 的状态。
 
 ![](https://ww2.sinaimg.cn/large/006tKfTcly1fd7r3rky7dj30oc0hmdho.jpg)
 
 
-### 在 chrome 中显示网络请求
+### 在 Chrome 中显示网络请求
 
 查看 RN 源码 [Libraries/Core/InitializeCore.js](https://github.com/facebook/react-native/blob/dba133a29194e300e9a2e9e6753f9d4e3a13c194/Libraries/Core/InitializeCore.js#L51)，注释中写着：
 
@@ -62,7 +65,7 @@ if (isDebuggingInChrome) {
 
 原来的 `XMLHttpRequest` 被改写成了  `originalXMLHttpRequest`，
 
-所以要在 chrome 中显示 `network` 只需要替换 `XMLHttpRequest` 为 `originalXMLHttpRequest`。
+所以要在 Chrome 中显示 `network` 只需要替换 `XMLHttpRequest` 为 `originalXMLHttpRequest`。
 
 ```js
 if (__DEV__) {
@@ -70,15 +73,20 @@ if (__DEV__) {
 }
 ```
 
-当然，chrome 会限制跨域请求，这时要么后端配合一下去除跨域限制，要么使用 [Allow-Control-Allow-Origin: *](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) 插件。
+当然，这样有可能会产生 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS), Chrome 会限制跨域请求。
+
+这时要么后端配合一下去除限制，要么使用 [Allow-Control-Allow-Origin: *](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) 插件。
+
+这样就可以愉快的调试网络请求了，而不用打印出来，毕竟打印实在是太卡了。
 
 ![](https://ww3.sinaimg.cn/large/006tKfTcly1fd7rux58ayj31da0myq9y.jpg)
 
-这样就可以愉快的调试网络请求了，而不用打印出来，毕竟打印实在是太卡了。
 
 ### react-native-debugger
 
 无意中看到这个 repo [react-native-debugger](https://github.com/jhen0409/react-native-debugger#react-native-debugger)，
+
+![](https://ww3.sinaimg.cn/large/006tKfTcgy1fd894emd5jj30x90nhaf5.jpg)
 
 使用了 electron，竟然还注入了 React Inspector / Redux DevTools，可以尝试使用。
 
@@ -91,7 +99,7 @@ if (__DEV__) {
 
 希望 RN 早点迎来 1.0.0 release。
 
-有时间还是要阅读下 RN 源码才好。
+有时间还是要多阅读 RN 源码才好。
 
 ### 参考
 
