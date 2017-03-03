@@ -33,3 +33,13 @@
 [whatwg](https://whatwg.org/)
 
 [hacks.mozilla.org](https://hacks.mozilla.org/)
+
+[Vjeux](http://blog.vjeux.com/)
+
+[Addy Osmani](https://medium.com/@addyosmani)
+
+[Dan Abramov](https://medium.com/@dan_abramov)
+
+[Paul Irish](https://medium.com/@paul_irish)/[paulirish.com](https://www.paulirish.com)
+
+[TJ Holowaychuk](https://medium.com/@tjholowaychuk)
