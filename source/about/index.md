@@ -17,12 +17,12 @@ All open source can be found on [GitHub](https://github.com/xwartz).
 ### Activities
 
 * [GitHub](https://github.com/xwartz)
-* [Weibo](http://weibo.com/samedie)
+* [Douban](https://www.douban.com/people/samedie)
 * [Twitter](https://twitter.com/xwartzz)
 * [Instagram](https://www.instagram.com/xwartz)
 
 ### Records
 
 * [Consenlabs](https://github.com/consenlabs)
-* [MGJ](https://github.com/mogujie)
+* [mogujie](https://github.com/mogujie)
 * [Appest](https://ticktick.com/)
