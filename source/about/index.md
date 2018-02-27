@@ -23,5 +23,6 @@ All open source can be found on [GitHub](https://github.com/xwartz).
 
 ### Records
 
-* [MGJ](http://www.mogujie.com/)
+* [Consenlabs](https://github.com/consenlabs)
+* [MGJ](https://github.com/mogujie)
 * [Appest](https://ticktick.com/)
