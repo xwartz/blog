@@ -14,7 +14,7 @@ before_script:
   - git config --global user.name "xwartz"
   - git config --global user.email "stddup@gmail.com"
 script:
-  - npm run deploy
+  - npm run build
 after_script:
   - cd public
   - git init
