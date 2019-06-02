@@ -14,19 +14,18 @@ before_script:
   - git config --global user.name "xwartz"
   - git config --global user.email "stddup@gmail.com"
 script:
-  - npm run build
+  - npm run deploy
 after_script:
-  - cd public
-  - git init
-  - git config user.name "xwartz"
-  - git config user.email "stddup@gmail.com"
-  - git add --all
-  - git commit -m "Update blog"
-  - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:gh-pages
+  # - cd public
+  # - git init
+  # - git config user.name "xwartz"
+  # - git config user.email "stddup@gmail.com"
+  # - git add --all
+  # - git commit -m "Update blog"
+  # - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:gh-pages
 os:
 - osx
 env:
   global:
-    - GH_THEME: github.com/xwartz/hexo-theme-nuna.git
     - GH_REF: github.com/xwartz/blog.git
     - secure: vZ3pByss7Nw73dGv2vmbG59YVj3LCZqSJZJ0PKdACFX+Q2blRB2Ql+Y4TyA6eXaVZ0YMUHFQVntV4QJgXMaK6TfnccmKJ0RgxANrAkM0IPaM2+ozn0EeTjwfGv1xt0/Zxxqnp1HWzNxIsqI6YKX4fiXrXGxMNYwEVKFcuKsdSpYWTN7Kljdyf8WptknNBGzqQQf1sqETmsBtHsg0MmYP6cLn/h20OeHVvAljvCyxuMZckZgYmxHu7xCrXikw/oVyW1/EOtH1u2njskfK2oOOV1r7rFU0386IdglMHJ2Q6dKuc8RQRbhKcicsekO2PasaWRrjJaNPNiuJPEqCxf36N9p25B0FnNyPHoihyd2hU7Y5brqApOOMoHuow/Sgl85VaZslU0VpwceRrPk/Ma4IB8MUlimTMkjYEHfhwyIdiiBn3MtW8BuE6Zz9qd2I94XKs6b7kdO5iOHOdb8nvO2k2q+MHdSPUMVZ6AdrHeR25uHj7CQiesovbPFkDuYfZAMM1iYyHzW9SO1hSpMOZb6SN/MB8vRkGiOUzgUUIawGecPlWHHDijP2zAAdywFJyUWVNjDoXAA7eWf7U/y2j5G72lj4SuszTv7S8fwePLz8r7YN0rs6JDl4KcQhAko+WFMhPPuH4VJ8RrQ4Xlp4fb8sRAuZuWVbHsnm/vpORANb13k=
