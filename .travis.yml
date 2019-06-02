@@ -13,8 +13,6 @@ install:
 before_script:
   - git config --global user.name "xwartz"
   - git config --global user.email "stddup@gmail.com"
-  - rm -rf themes/nuna
-  - git clone https://${GH_Token}@${GH_THEME} --branch next --single-branch themes/nuna
 script:
   - npm run build
 after_script:
