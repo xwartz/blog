@@ -43,7 +43,7 @@ spoiler: 个人使用 Beancount 的最佳实践
 放弃他的原因如下：
 
 1. 导出功能需要会员，我自己的数据竟然不让导出？(满屏广告了，还这么小气)
-2. 预算功能在不断向的他们提需求后，加上了简陋版
+2. 预算功能在不断向他们提需求后，加上了简陋版
 3. 资产变化图迟迟不增加
 4. 信用卡数据同步 bug 不解决，有次出差，把打车费分类到「出差」，从此导入的交通费都被自动分类到「出差」🙃
 
@@ -64,7 +64,7 @@ Beancount 的优点：
 
 ## 基本语法
 
-一下只是一些经常使用到基本语法，完整语法查看文档：[Beancount Language Syntax](https://docs.google.com/document/d/1wAMVrKIA2qtRGmoVDSUBJGmYZSygUaR0uOMW1GV3YE0/edit)。
+以下只是一些经常使用到基本语法，完整语法查看文档：[Beancount Language Syntax](https://docs.google.com/document/d/1wAMVrKIA2qtRGmoVDSUBJGmYZSygUaR0uOMW1GV3YE0/edit)。
 
 指令格式：
 ```
