@@ -348,3 +348,4 @@ fava *.bean
 - [Awesome Beancount](https://github.com/wzyboy/awesome-beancount)
 - [Beancount —— 命令行复式簿记](https://wzyboy.im/post/1063.html)
 - [使用 Beancount 记录证券投资](https://wzyboy.im/post/1317.html)
+- [Beancount 最佳实践](/beancount-best-practice/)
