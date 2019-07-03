@@ -116,7 +116,7 @@ docs(changelog): update changelog to beta.5
 
 **Body**
 
-`body` 可以选择填写 tower 的链接，或者不写，在 `PR` 上写即可。
+`body` 可以选择填写任务的链接，或者不写，在 `PR` 上写即可。
 
 **Footer**
 
