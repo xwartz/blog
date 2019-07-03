@@ -8,7 +8,7 @@ spoiler: 个人使用 Beancount 的最佳实践
 
 [Beancount](https://github.com/beancount/beancount) 是一个开源的复式记账软件，使用 python 实现，可自己本地运行部署。
 
-数据文件是 Plain Text，因此可以用喜欢的方式管理自己的账单数据。
+数据文件是 Plain Text，可以用喜欢的方式管理自己的账单数据。
 
 ## 为什么需要记账
 
@@ -31,7 +31,7 @@ spoiler: 个人使用 Beancount 的最佳实践
 
 我之前 2-3 年使用的记账软件是「网易有钱」，当初选择记账软件大概有以下几点考量：
 
-1. UI 要好看
+1. 漂亮的 UI
 2. 支持数据导入、导出
 3. 可视化：收入、支出、资产，变化图
 4. 预算功能
@@ -42,7 +42,7 @@ spoiler: 个人使用 Beancount 的最佳实践
 
 放弃他的原因如下：
 
-1. 导出功能需要会员，我自己的数据竟然不让导出？(满屏广告了，还这么小气)
+1. 导出功能需要会员，个人的数据竟然不让导出？(满屏广告了，还这么小气)
 2. 预算功能在不断向他们提需求后，加上了简陋版
 3. 资产变化图迟迟不增加
 4. 信用卡数据同步 bug 不解决，有次出差，把打车费分类到「出差」，从此导入的交通费都被自动分类到「出差」🙃
@@ -58,9 +58,11 @@ Beancount 的优点：
 
 此外，Beancount 可高度自定义，可自定义货币，因此可轻松应对不同币种账单。
 
-甚至可以用他记录所有的交易，例如，可以把年假想象成交易，每年的年假相当于收入，从公司账户转账，变成资产，当请假时，相当于把年假消费出去了。因此，可以记录年假的「交易」，货币单位为「天」。
+甚至可以用他记录所有的交易，例如，可以把年假想象成交易，每年的年假相当于收入，从公司账户转账到个人账户，变成资产。
 
-选择 Beancount 的理由，也可以从作者创造 Beancount 的动机上发现，了解详情查看 [Command-line Accounting in Context](https://docs.google.com/document/d/1e4Vz3wZB_8-ZcAwIFde8X5CjzKshE4-OXtVVHm4RQ8s/edit#heading=h.7r5losli85n7)。
+当请假时，相当于把年假消费出去了。因此，可以记录年假的「交易」，货币单位为「天」。
+
+选择 Beancount 的理由，也可以从作者创造 Beancount 的动机上了解，详情查看 [Command-line Accounting in Context](https://docs.google.com/document/d/1e4Vz3wZB_8-ZcAwIFde8X5CjzKshE4-OXtVVHm4RQ8s/edit#heading=h.7r5losli85n7)。
 
 ## 基本语法
 
