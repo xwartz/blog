@@ -11,20 +11,21 @@ class Footer extends React.Component {
           paddingTop: rhythm(1),
         }}
       >
-        <a
+        {/* <a
           href="https://mobile.twitter.com/xwartzz"
           target="_blank"
           rel="noopener noreferrer"
         >
           twitter
-        </a>{' '}
-        &bull;{' '}
+        </a>{' '} */}
+        {/* &bull;{' '} */}
+        <span>Personal blog by </span>
         <a
           href="https://github.com/xwartz"
           target="_blank"
           rel="noopener noreferrer"
         >
-          github
+          xwartz
         </a>
       </footer>
     );

@@ -63,7 +63,7 @@ body:lang(ar) blockquote {
 /* styles for Persian language */
 body:lang(fa) article,
 body:lang(fa) header > h1 {
-  font-family: 'Vazir';
+  font-family: 'Vazir', sans-serif;
 }
 /* styles for Arabic language */
 body:lang(ar) article,
