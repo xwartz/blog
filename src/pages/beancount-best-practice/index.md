@@ -6,26 +6,27 @@ spoiler: 个人使用 Beancount 的最佳实践
 
 ## Beancount 是什么
 
-[Beancount](https://github.com/beancount/beancount) 是一个开源的复式记账软件，使用 python 实现，可自己本地运行部署。
+[Beancount](https://github.com/beancount/beancount) 是一个开源的复式记账软件，使用 python 实现，可自己本地运行部署
 
-数据文件是 Plain Text，可以用喜欢的方式管理自己的账单数据。
+数据文件是 Plain Text，可以用喜欢的方式管理自己的账单数据
 
 ## 为什么需要记账
 
-有规律的记录自己的收入、负债、资产、花费情况，把这些记录留存，随着时间推移，累积历史数据。
+有规律的记录自己的收入、负债、资产、花费情况，把这些记录留存，随着时间推移，累积历史数据
 
-当我们复盘回顾的时候，有了这些数据记录，可以轻易的了解过去，了解自己的消费习惯，记账是一个对我自己认知提升的方式。
+当我们复盘回顾的时候，有了这些数据记录，可以轻易的了解过去，了解自己的消费习惯，记账是一个对我自己认知提升的方式
 
-当我们想分析当前的财务情况时，可以对着资金表格，清楚地知道资产分配、负债情况、净资产有多少。
+当我们想分析当前的财务情况时，可以对着资金表格，清楚地知道资产分配、负债情况、净资产有多少
 
-当我们想规划未来时，看看在哪些方面的资产增长最快，更好的分配自己的资金、精力。例如，工资收入是增长最快的，
-而投资的资产都是亏损，那么是否更应该把精力花在职业发展上呢？(没准更应该花精力学习投资 🤔)
+当我们想规划未来时，看看在哪些方面的资产增长最快，更好的分配自己的资金、精力
 
-当我们想做预算时，可以从过去的花费情况里，更准确预计将来的花费，有心理预期，花多少钱都不慌 🙃。
+例如，工资收入是增长最快的，而投资的资产则是亏损，那么是否更应该把精力花在职业发展上呢？(可能更应该花精力学习投资 🤔)
 
-有了记账后，可以获取资产占比报表，对于个人的投资理财也会方便很多，优化资金分配。
+当我们想做预算时，可以从过去的花费情况里，更准确预计将来的花费，有心理预期，花多少钱都不慌 🙃
 
-总之，记账之后让我更从容一些。
+有了记账后，可以获取资产占比报表，对于个人的投资理财也会方便很多，优化资金分配
+
+总之，记账之后让我更从容一些
 
 ## 为什么选择 Beancount
 
@@ -38,7 +39,7 @@ spoiler: 个人使用 Beancount 的最佳实践
 5. 多账本
 6. 信用卡数据同步
 
-「网易有钱」当时满足了(不完全)以上的 1、2、3、5、6，因为其他国内产品也各有缺点，所以只能将就。
+「网易有钱」当时满足了(不完全)以上的 1、2、3、5、6，因为其他国内产品也各有缺点，所以只能将就
 
 放弃他的原因如下：
 
@@ -56,17 +57,27 @@ Beancount 的优点：
 5. 支持无限账本，除了给自己记账，还可以帮家人记账
 6. 可导入信用卡账单文件(其实可以任意文件，自己写脚本转化即可)
 
-此外，Beancount 可高度自定义，可自定义货币，因此可轻松应对不同币种账单。
+此外，Beancount 可高度自定义，可自定义货币，因此可轻松应对不同币种账单，甚至可以用他记录所有的交易
 
-甚至可以用他记录所有的交易，例如，可以把年假想象成交易，每年的年假相当于收入，从公司账户转账到个人账户，变成资产。
+例如，可以把「年假」想象成交易，每年的「年假」相当于工作收入，从公司账户转账到个人账户，变成资产
 
-当请假时，相当于把年假消费出去了。因此，可以记录年假的「交易」，货币单位为「天」。
+当请假时，相当于把「年假」消费出去了，因此，可以记录年假的「交易」，货币单位为「天」
 
-选择 Beancount 的理由，也可以从作者创造 Beancount 的动机上了解，详情查看 [Command-line Accounting in Context](https://docs.google.com/document/d/1e4Vz3wZB_8-ZcAwIFde8X5CjzKshE4-OXtVVHm4RQ8s/edit#heading=h.7r5losli85n7)。
+```
+2019-04-24 * "CompanyName" "请假一天休息"
+  Assets:Leave                                 -1.00 DAY
+  Expenses:Health
+
+2019-04-01 * "CompanyName" "年假-初始化"
+  Income:Job:CompanyName:Leave
+  Assets:Leave                                 +7.00 DAY
+```
+
+选择 Beancount 的理由，也可以从作者创造 Beancount 的动机上了解，详情查看 [Command-line Accounting in Context](https://docs.google.com/document/d/1e4Vz3wZB_8-ZcAwIFde8X5CjzKshE4-OXtVVHm4RQ8s/edit#heading=h.7r5losli85n7)
 
 ## 基本语法
 
-以下只是一些经常使用到基本语法，完整语法查看文档：[Beancount Language Syntax](https://docs.google.com/document/d/1wAMVrKIA2qtRGmoVDSUBJGmYZSygUaR0uOMW1GV3YE0/edit)。
+以下只是一些经常使用到基本语法，完整语法查看文档：[Beancount Language Syntax](https://docs.google.com/document/d/1wAMVrKIA2qtRGmoVDSUBJGmYZSygUaR0uOMW1GV3YE0/edit)
 
 指令格式：
 ```
@@ -76,12 +87,16 @@ YYYY-MM-DD <directive> <arguments...>
 1. 声明货币
 
 不是必须的，可以不定义
+
+定义币种 CNY，代表 China Yuan
 ```
 1949-10-01 commodity CNY
   name: "China Yuan"
 ```
 
 2. 创建/关闭账户
+
+创建和关闭账户使用关键词 `open` 和 `close`，例如：
 
 2014-01-01 创建一个「人民币现金」账户
 ```
@@ -126,25 +141,25 @@ YYYY-MM-DD <directive> <arguments...>
 
 ## 开始使用 Beancount
 
-在开始使用 Beancount 之前，有必要整体浏览一下官网文档 [Beancount Documentation](https://docs.google.com/document/d/1RaondTJCS_IUPBHFNdT8oqFKJjVJDsfsn6JEjBG04eA/edit#)。
+在开始使用 Beancount 之前，有必要整体浏览一下官网文档 [Beancount Documentation](https://docs.google.com/document/d/1RaondTJCS_IUPBHFNdT8oqFKJjVJDsfsn6JEjBG04eA/edit#)
 
 ### 安装
 
-首先需要安装 [python 3](http://python.org/)，然后安装
+首先需要安装 [python 3](http://python.org/)，然后安装 `beancout`、`fava`
 
 ```bash
 pip3 install beancount fava
 ```
 
-[fava](https://github.com/beancount/fava) 是一个网页可视化工具。
+[fava](https://github.com/beancount/fava) 是一个网页可视化工具，平常看报表都使用她
 
-文本编辑使用 [vscode](https://github.com/microsoft/vscode)
-
-语法高亮插件可用 [vscode-beancount](https://github.com/Lencerf/vscode-beancount)。
+文本编辑器推荐 [vscode](https://github.com/microsoft/vscode)，再配合语法高亮插件 [vscode-beancount](https://github.com/Lencerf/vscode-beancount) 即可
 
 ### 使用 git
 
-在 github 创建仓库，用于保存账本文件，使用 git 进行版本管理。
+在 github 创建仓库，用于保存账本文件，使用 git 进行版本管理
+
+> 注意：请一定创建私密仓库，账单信息量巨大，属于很隐私的东西，避免泄露
 
 ### 目录
 
@@ -182,20 +197,24 @@ pip3 install beancount fava
     └── index.bean
 ```
 
-其中 `main.bean` 为入口文件，`account` 存放账户，`txs` 存放交易，使用 `index.bean` 文件 `include` 其他文件。
+其中：
 
-交易目录按照年、月区分，方便手动查找。
+`main.bean`：为账单入口文件，该文件只用来 `include` 其他文件
+
+`account`：账户目录，文件可按类型划分为收入、资产、负债、消费、初始金额
+
+`txs`：存放交易，可以按年、月管理，方便记录和查找账单；有些特殊的可以按照类型单独创建，例如：投资账单
+
+每个大目录下都创建 `index.bean` 文件，作为目录入口来 `include` 其他文件
 
 ### 创建账户
 
 #### 收入账户:
 
-可以是投资收入、工作收入、利息等。
-
-工作收入使用 `CompanyName:Salary` 这样的分类，开户日期使用入职时间，
-这样就可以直观知道在某个公司的回报情况了。
+可以是投资收入、工作收入、利息等
 
 例如：
+
 ```
 ; --- 投资盈亏 ---
 2016-02-15 open Income:PnL
@@ -210,7 +229,13 @@ pip3 install beancount fava
 2016-02-15 open Income:PnL:DigitalCy
 2016-02-15 note Income:PnL:DigitalCy "数字货币"
 ; --- /投资盈亏 ---
+```
 
+工作收入使用 `CompanyName:Salary` 这样的分类，开户日期使用入职时间
+
+这样做的好处是，可以直观知道在某个公司期间的回报情况
+
+```
 ; --- 工作 ---
 ; Salary
 2016-10-24 open Income:Job:CompanyName:Salary USD,CNY
@@ -223,7 +248,7 @@ pip3 install beancount fava
 
 #### 负债账户:
 
-信用卡、花呗、应付款等。
+信用卡、花呗、应付款等
 
 ```
 ; 花呗
@@ -239,7 +264,7 @@ pip3 install beancount fava
 
 #### 资产:
 
-现金、银行卡、理财产品、房子、车子、应收款等。
+现金、银行卡、理财产品、房子、车子、应收款等
 
 ```
 ; --- 现金 ---
@@ -267,14 +292,16 @@ pip3 install beancount fava
 
 ### 数据迁移
 
-账户创建完之后，开始记录交易，但是如果有以前的账单数据，如果处理呢？我们需要将数据迁移过来。
+账户创建完之后，开始记录交易，但是如果有以前的账单数据，如果处理呢？我们需要将数据迁移过来
 
-**在迁移数据之前，可以使用余额断言，记录各个账户当前的余额。**
+> 在迁移数据之前，可以使用余额断言，记录各个账户当前的余额
 
-这样做的好处是，我们可以慢慢迁移老数据，又不影响使用 Beancount 记录后面发生的交易。
+这样做的好处是，我们可以慢慢迁移老数据，又不影响使用 Beancount 记录后面发生的交易
 
 例如：
-在 2019-05-01 开始使用 Beancount，目前有港币现金 23000，招商银行余额 50000。
+
+在 2019-05-01 开始使用 Beancount，目前有港币现金 23000，招商银行余额 50000
+
 ```
 ; 现金
 2019-05-01 pad Assets:Cash:HKD Equity:Opening-Balances
@@ -284,19 +311,19 @@ pip3 install beancount fava
 2019-05-01 balance Assets:Cash:Bank:CMB     50000.00 CNY
 ```
 
-这样，在 2019-05-01 之前的数据变化不会影响账户余额了，而 2019-05-01 之后发生的交易可以使用 Beancount 正常记录。
+这样，在 2019-05-01 之前的数据变化不会影响账户余额了，而 2019-05-01 之后发生的交易可以使用 Beancount 正常记录
 
-当把 2019-05-01 之前的数据补充完整，账单变化即可在 Beancount 显示了。
+当把 2019-05-01 之前的数据补充完整，账单变化即可在 Beancount 显示了
 
-数据迁移可使用官方提供的[导入插件](https://docs.google.com/document/d/11EwQdujzEo2cxqaF5PgxCEZXWfKKQCYSMfdJowp_1S8/edit)，或者手动迁移(记录重要的部分即可)。
+数据迁移可使用官方提供的[导入插件](https://docs.google.com/document/d/11EwQdujzEo2cxqaF5PgxCEZXWfKKQCYSMfdJowp_1S8/edit)，或者手动迁移(记录重要的部分即可)
 
 ## 记录投资
 
-相比较现金的流水，投资理财的记录就难多了，投资理财很难用一个币种表示，因此需要创建很多货币单位。
+相比较现金的流水，投资理财的记录就难多了，投资理财很难用一个币种表示，因此需要创建很多货币单位
 
-**以股票代号、代币符号作为货币单位更适合记录。**
+> 以股票代号、代币符号作为货币单位更适合记录
 
-例如：阿毛在 2019-05-01 用 7000 人民币，买了 1000 个 USDT(一种数字货币)，然后用 USDT 买了 5 个 ETH(以太坊)。
+例如：阿毛在 2019-05-01 用 7000 人民币，买了 1000 个 USDT(一种数字货币)，然后用 USDT 买了 5 个 ETH(以太坊)
 
 ```
 2019-05-01 * "Huobi" "Buy 1000 USDT"
@@ -315,11 +342,11 @@ pip3 install beancount fava
 2019-06-01 price ETH   300 USDT
 ```
 
-Beancount 即可将 ETH 的价值转化为 CNY。
+Beancount 即可将 USDT、ETH 的价值转化为 CNY
 
 ## 预算
 
-fava 支持预算功能，可按天、周、月、季度、年来规划。
+fava 支持预算功能，可按天、周、月、季度、年来规划
 
 ```
 2012-01-01 custom "budget" Expenses:Coffee       "daily"         4.00 EUR
@@ -329,16 +356,17 @@ fava 支持预算功能，可按天、周、月、季度、年来规划。
 2016-06-01 custom "budget" Expenses:Holiday      "yearly"     2500.00 EUR
 ```
 
-如果是按月来做预算，那么可以在该月的文件开头，设置这个月的预算。
+如果是按月来做预算，那么可以在该月的文件开头设置这个月的预算(*任何地方都可以，只是为了查起来方便*)
 
 ## 多账本
 
-生活中可能不止一个账本就可以完全记录。
+生活中可能不止一个账本就可以完全记录
 
-例如：需要帮助爸妈记录账单，和自己账户不可共用，因此需要新建账本。
+例如：需要帮助爸妈记录账单，和自己账户不可共用，这时就需要新建另一个账本
 
-fava 支持多个账本同时显示，在根目录创建另一个账本 `test.bean`，
-执行以下命令，即可在 fava 网页端切换多个账本。
+fava 支持多个账本同时显示，可在根目录创建另一个账本 `test.bean`
+
+执行以下命令，即可在 fava 网页端切换多个账本
 
 ```
 fava *.bean
