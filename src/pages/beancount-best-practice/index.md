@@ -2,6 +2,7 @@
 title: Beancount 最佳实践
 date: '2019-06-02'
 spoiler: 个人使用 Beancount 的最佳实践
+tags: ['beancount']
 ---
 
 ## Beancount 是什么

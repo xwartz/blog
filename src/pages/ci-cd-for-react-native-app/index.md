@@ -2,6 +2,7 @@
 title: 搭建 RN 项目的 CI/CD
 date: '2019-07-26'
 spoiler: 使用 Jenkins 自动化 RN 项目单元测试、构建、发布
+tags: ['CI/CD', 'RN']
 ---
 
 本篇文章主要讲如何使用 [Jenkins](https://jenkins.io/) 为 `React Native` 项目搭建 `CI/CD`。
