@@ -2,7 +2,7 @@
 title: JavaScript 继承
 date: '2016-08-04'
 spoiler: 关于 JavaScript 继承的回顾
-tags: ['JavaScript']
+tags: ['JavaScript', 'code']
 ---
 
 > `JavaScript` 是一种基于原型的面向对象语言，而不是基于类的。
