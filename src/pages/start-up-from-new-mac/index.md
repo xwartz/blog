@@ -1,5 +1,5 @@
 ---
-title: 搭建一个漂亮、高效的开发环境
+title: 重来：搭建开发环境
 date: '2018-10-24'
 spoiler: 从一台新 Mac 开始搭建开发环境的一些经验
 tags: ['tools', 'code']
